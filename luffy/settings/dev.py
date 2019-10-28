@@ -191,3 +191,7 @@ LOGGING = {
         # }
     }
 }
+REST_FRAMEWORK ={
+    #异常处理
+    'EXCEPTION_HANDLER':'luffy.utils.exceptions.custom_exception_handler',
+}

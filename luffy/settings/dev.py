@@ -14,9 +14,12 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#新增打包路径 因为我们的项目子应用目录进行了修改
+sys.path.insert(0,os.path.join(BASE_DIR,'apps'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -40,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -132,6 +136,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,"static")
+]
+MEDIA_ROOT = os.path.join(BASE_DIR,"uploads")
+MEDIA_URL = "/media/"
 
 # 日志配置
 LOGGING = {

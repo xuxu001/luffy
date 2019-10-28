@@ -1,2 +1,316 @@
 INFO 2019-10-28 15:20:45,467 basehttp 864 16028 "GET / HTTP/1.1" 200 16286
 INFO 2019-10-28 15:27:00,841 basehttp 9752 18772 "GET / HTTP/1.1" 200 16286
+WARNING 2019-10-28 19:05:37,256 log 16692 5560 Not Found: /
+WARNING 2019-10-28 19:05:37,261 basehttp 16692 5560 "GET / HTTP/1.1" 404 2149
+INFO 2019-10-28 19:05:49,764 basehttp 16692 5560 "GET /home/banner HTTP/1.1" 301 0
+ERROR 2019-10-28 19:05:56,318 log 16692 5560 Internal Server Error: /home/banner/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 757, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 675, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 268, in __iter__
+    self._fetch_all()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 1186, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 1052, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 449, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 51, in pre_sql_setup
+    order_by = self.get_order_by()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 315, in get_order_by
+    field, self.query.get_meta(), default_order=asc))
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 668, in find_ordering_name
+    field, targets, alias, joins, path, opts, transform_function = self._setup_joins(pieces, opts, alias)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 698, in _setup_joins
+    field, targets, opts, joins, path, transform_function = self.query.setup_joins(pieces, opts, alias)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1473, in setup_joins
+    names[:pivot], opts, allow_many, fail_on_missing=True,
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1389, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'order' into field. Choices are: id, image, is_delete, is_show, link, name, note, orders
+ERROR 2019-10-28 19:05:56,327 basehttp 16692 5560 "GET /home/banner/ HTTP/1.1" 500 169113
+ERROR 2019-10-28 19:07:00,622 log 16692 5560 Internal Server Error: /home/banner/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 757, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 675, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 268, in __iter__
+    self._fetch_all()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 1186, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 1052, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 449, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 51, in pre_sql_setup
+    order_by = self.get_order_by()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 315, in get_order_by
+    field, self.query.get_meta(), default_order=asc))
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 668, in find_ordering_name
+    field, targets, alias, joins, path, opts, transform_function = self._setup_joins(pieces, opts, alias)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 698, in _setup_joins
+    field, targets, opts, joins, path, transform_function = self.query.setup_joins(pieces, opts, alias)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1473, in setup_joins
+    names[:pivot], opts, allow_many, fail_on_missing=True,
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1389, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'order' into field. Choices are: id, image, is_delete, is_show, link, name, note, orders
+ERROR 2019-10-28 19:07:00,624 basehttp 16692 5560 "GET /home/banner/ HTTP/1.1" 500 169248
+ERROR 2019-10-28 19:07:36,741 log 14252 1240 Internal Server Error: /home/banner/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 757, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 675, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 268, in __iter__
+    self._fetch_all()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 1186, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 1052, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 449, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 51, in pre_sql_setup
+    order_by = self.get_order_by()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 315, in get_order_by
+    field, self.query.get_meta(), default_order=asc))
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 668, in find_ordering_name
+    field, targets, alias, joins, path, opts, transform_function = self._setup_joins(pieces, opts, alias)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 698, in _setup_joins
+    field, targets, opts, joins, path, transform_function = self.query.setup_joins(pieces, opts, alias)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1473, in setup_joins
+    names[:pivot], opts, allow_many, fail_on_missing=True,
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1389, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'order' into field. Choices are: id, image, is_delete, is_show, link, name, note, orders
+ERROR 2019-10-28 19:07:36,750 basehttp 14252 1240 "GET /home/banner/ HTTP/1.1" 500 169248
+INFO 2019-10-28 19:07:51,757 basehttp 1612 7720 "GET /home/banner/ HTTP/1.1" 200 5215
+INFO 2019-10-28 19:07:51,883 basehttp 1612 7720 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2019-10-28 19:07:51,930 basehttp 1612 17848 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2019-10-28 19:07:51,930 basehttp 1612 3488 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2019-10-28 19:07:51,985 basehttp 1612 18468 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2019-10-28 19:07:52,172 basehttp 1612 18468 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2019-10-28 19:07:52,196 basehttp 1612 18468 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2019-10-28 19:07:52,252 basehttp 1612 7720 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+INFO 2019-10-28 19:07:52,323 basehttp 1612 3320 "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+INFO 2019-10-28 19:07:52,345 basehttp 1612 252 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2019-10-28 19:07:52,384 basehttp 1612 3488 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2019-10-28 19:07:52,412 basehttp 1612 17848 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+INFO 2019-10-28 19:43:45,034 basehttp 16712 17300 "GET /xadmin/ HTTP/1.1" 200 4151
+INFO 2019-10-28 19:43:45,256 basehttp 16712 17300 "GET /static/xadmin/vendor/bootstrap/css/bootstrap.css HTTP/1.1" 200 126432
+INFO 2019-10-28 19:43:45,279 basehttp 16712 11236 "GET /static/xadmin/css/xadmin.plugins.css HTTP/1.1" 200 175
+INFO 2019-10-28 19:43:45,295 basehttp 16712 19460 "GET /static/xadmin/css/themes/bootstrap-xadmin.css HTTP/1.1" 200 1888
+INFO 2019-10-28 19:43:45,303 basehttp 16712 11236 "GET /xadmin/jsi18n/ HTTP/1.1" 200 4158
+INFO 2019-10-28 19:43:45,324 basehttp 16712 18636 "GET /static/xadmin/vendor/font-awesome/css/font-awesome.css HTTP/1.1" 200 21658
+INFO 2019-10-28 19:43:45,344 basehttp 16712 13528 "GET /static/xadmin/css/xadmin.responsive.css HTTP/1.1" 200 4361
+INFO 2019-10-28 19:43:45,396 basehttp 16712 5016 "GET /static/xadmin/css/xadmin.main.css HTTP/1.1" 200 8376
+INFO 2019-10-28 19:43:45,553 basehttp 16712 11236 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.widget.js HTTP/1.1" 200 15069
+INFO 2019-10-28 19:43:45,556 basehttp 16712 18636 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js HTTP/1.1" 200 4561
+INFO 2019-10-28 19:43:45,586 basehttp 16712 13528 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js HTTP/1.1" 200 42543
+INFO 2019-10-28 19:43:45,612 basehttp 16712 11236 "GET /static/xadmin/js/xadmin.main.js HTTP/1.1" 200 3401
+INFO 2019-10-28 19:43:45,622 basehttp 16712 17300 "GET /static/xadmin/vendor/jquery/jquery.js HTTP/1.1" 200 240196
+INFO 2019-10-28 19:43:45,623 basehttp 16712 5016 "GET /static/xadmin/vendor/bootstrap/js/bootstrap.js HTTP/1.1" 200 58327
+INFO 2019-10-28 19:43:45,650 basehttp 16712 19460 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.core.js HTTP/1.1" 200 8195
+INFO 2019-10-28 19:43:45,665 basehttp 16712 18636 "GET /static/xadmin/js/xadmin.responsive.js HTTP/1.1" 200 4165
+INFO 2019-10-28 19:43:46,118 basehttp 16712 18636 "GET /static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3 HTTP/1.1" 200 44432
+INFO 2019-10-28 19:45:29,138 basehttp 16712 18636 "POST /xadmin/ HTTP/1.1" 302 0
+INFO 2019-10-28 19:45:29,617 basehttp 16712 18636 "GET /xadmin/ HTTP/1.1" 200 9820
+INFO 2019-10-28 19:45:29,729 basehttp 16712 19460 "GET /static/xadmin/js/xadmin.page.dashboard.js HTTP/1.1" 200 3208
+INFO 2019-10-28 19:45:29,746 basehttp 16712 18636 "GET /static/xadmin/css/xadmin.page.dashboard.css HTTP/1.1" 200 790
+INFO 2019-10-28 19:45:29,753 basehttp 16712 5016 "GET /static/xadmin/js/xadmin.plugin.portal.js HTTP/1.1" 200 1000
+INFO 2019-10-28 19:45:29,794 basehttp 16712 17300 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-10-28 19:53:41,718 basehttp 9140 10560 "GET /xadmin/ HTTP/1.1" 200 14330
+INFO 2019-10-28 19:53:41,746 basehttp 9140 10560 "GET /static/xadmin/vendor/bootstrap/css/bootstrap.css HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,747 basehttp 9140 3252 "GET /static/xadmin/css/themes/bootstrap-xadmin.css HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,755 basehttp 9140 10560 "GET /static/xadmin/css/xadmin.page.dashboard.css HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,755 basehttp 9140 3252 "GET /static/xadmin/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,765 basehttp 9140 18724 "GET /static/xadmin/vendor/font-awesome/css/font-awesome.css HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,770 basehttp 9140 16820 "GET /static/xadmin/css/xadmin.main.css HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,773 basehttp 9140 20440 "GET /static/xadmin/css/xadmin.plugins.css HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,774 basehttp 9140 9976 "GET /static/xadmin/css/xadmin.responsive.css HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,779 basehttp 9140 16820 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.core.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,781 basehttp 9140 20440 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.widget.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,784 basehttp 9140 9976 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,787 basehttp 9140 16820 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,788 basehttp 9140 3252 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-10-28 19:53:41,790 basehttp 9140 20440 "GET /static/xadmin/vendor/bootstrap/js/bootstrap.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,792 basehttp 9140 9976 "GET /static/xadmin/js/xadmin.main.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,792 basehttp 9140 16820 "GET /static/xadmin/js/xadmin.responsive.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,792 basehttp 9140 3252 "GET /static/xadmin/js/xadmin.page.dashboard.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,892 basehttp 9140 20440 "GET /static/xadmin/js/xadmin.plugin.portal.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,893 basehttp 9140 3252 "GET /static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3 HTTP/1.1" 304 0
+INFO 2019-10-28 19:53:41,899 basehttp 9140 18724 "GET /static/xadmin/js/xadmin.plugin.themes.js HTTP/1.1" 200 3489
+INFO 2019-10-28 19:53:41,984 basehttp 9140 10560 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.effect.js HTTP/1.1" 200 31918
+INFO 2019-10-28 19:54:24,842 basehttp 9140 10560 "GET /xadmin/ HTTP/1.1" 200 14330
+INFO 2019-10-28 19:54:24,887 basehttp 9140 10560 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-10-28 19:54:33,022 basehttp 9140 10560 "GET /xadmin/reversion/revision/ HTTP/1.1" 200 28970
+INFO 2019-10-28 19:54:33,120 basehttp 9140 3252 "GET /static/xadmin/vendor/select2/select2.css HTTP/1.1" 200 19226
+INFO 2019-10-28 19:54:33,125 basehttp 9140 18724 "GET /static/xadmin/vendor/bootstrap-datepicker/css/datepicker.css HTTP/1.1" 200 10225
+INFO 2019-10-28 19:54:33,132 basehttp 9140 10560 "GET /static/xadmin/css/xadmin.form.css HTTP/1.1" 200 3763
+INFO 2019-10-28 19:54:33,140 basehttp 9140 3252 "GET /static/xadmin/js/xadmin.plugin.bookmark.js HTTP/1.1" 200 529
+INFO 2019-10-28 19:54:33,153 basehttp 9140 20440 "GET /static/xadmin/vendor/selectize/selectize.css HTTP/1.1" 200 8425
+INFO 2019-10-28 19:54:33,159 basehttp 9140 9976 "GET /static/xadmin/js/xadmin.plugin.details.js HTTP/1.1" 200 2319
+INFO 2019-10-28 19:54:33,175 basehttp 9140 10560 "GET /static/xadmin/js/xadmin.widget.datetime.js HTTP/1.1" 200 2979
+INFO 2019-10-28 19:54:33,176 basehttp 9140 18724 "GET /static/xadmin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js HTTP/1.1" 200 32656
+INFO 2019-10-28 19:54:33,260 basehttp 9140 16820 "GET /static/xadmin/vendor/selectize/selectize.bootstrap3.css HTTP/1.1" 200 10602
+INFO 2019-10-28 19:54:33,262 basehttp 9140 20440 "GET /static/xadmin/vendor/select2/select2.js HTTP/1.1" 200 104906
+INFO 2019-10-28 19:54:33,293 basehttp 9140 3252 "GET /static/xadmin/vendor/selectize/selectize.js HTTP/1.1" 200 98602
+INFO 2019-10-28 19:54:33,328 basehttp 9140 3252 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-10-28 19:54:33,330 basehttp 9140 16820 "GET /static/xadmin/js/xadmin.page.list.js HTTP/1.1" 200 1105
+INFO 2019-10-28 19:54:33,330 basehttp 9140 18724 "GET /static/xadmin/js/xadmin.widget.select.js HTTP/1.1" 200 1344
+INFO 2019-10-28 19:54:33,341 basehttp 9140 20440 "GET /static/xadmin/js/xadmin.page.form.js HTTP/1.1" 200 1948
+INFO 2019-10-28 19:54:33,358 basehttp 9140 9976 "GET /static/xadmin/vendor/select2/select2_locale_zh-hans.js HTTP/1.1" 200 694
+INFO 2019-10-28 19:54:33,374 basehttp 9140 10560 "GET /static/xadmin/js/xadmin.plugin.filters.js HTTP/1.1" 200 1990
+INFO 2019-10-28 19:54:40,917 basehttp 9140 10560 "GET /xadmin/reversion/revision/ HTTP/1.1" 200 28970
+INFO 2019-10-28 19:54:41,020 basehttp 9140 10560 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-10-28 19:55:16,892 basehttp 9140 10560 "GET /xadmin/reversion/revision/ HTTP/1.1" 200 28970
+INFO 2019-10-28 19:55:16,947 basehttp 9140 9976 "GET /static/xadmin/css/themes/bootstrap-xadmin.css HTTP/1.1" 200 1888
+INFO 2019-10-28 19:55:16,951 basehttp 9140 20440 "GET /static/xadmin/vendor/font-awesome/css/font-awesome.css HTTP/1.1" 200 21658
+INFO 2019-10-28 19:55:16,951 basehttp 9140 3252 "GET /static/xadmin/css/xadmin.main.css HTTP/1.1" 200 8376
+INFO 2019-10-28 19:55:16,952 basehttp 9140 18724 "GET /static/xadmin/css/xadmin.responsive.css HTTP/1.1" 200 4361
+INFO 2019-10-28 19:55:16,952 basehttp 9140 16820 "GET /static/xadmin/css/xadmin.plugins.css HTTP/1.1" 200 175
+INFO 2019-10-28 19:55:16,953 basehttp 9140 10560 "GET /static/xadmin/vendor/bootstrap/css/bootstrap.css HTTP/1.1" 200 126432
+INFO 2019-10-28 19:55:16,974 basehttp 9140 9976 "GET /static/xadmin/css/xadmin.form.css HTTP/1.1" 200 3763
+INFO 2019-10-28 19:55:16,974 basehttp 9140 3252 "GET /static/xadmin/vendor/bootstrap-datepicker/css/datepicker.css HTTP/1.1" 200 10225
+INFO 2019-10-28 19:55:16,975 basehttp 9140 18724 "GET /static/xadmin/vendor/select2/select2.css HTTP/1.1" 200 19226
+INFO 2019-10-28 19:55:16,976 basehttp 9140 16820 "GET /static/xadmin/vendor/selectize/selectize.css HTTP/1.1" 200 8425
+INFO 2019-10-28 19:55:16,977 basehttp 9140 20440 "GET /static/xadmin/vendor/selectize/selectize.bootstrap3.css HTTP/1.1" 200 10602
+INFO 2019-10-28 19:55:16,979 basehttp 9140 10560 "GET /static/xadmin/vendor/jquery/jquery.js HTTP/1.1" 200 240196
+INFO 2019-10-28 19:55:17,008 basehttp 9140 18724 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.core.js HTTP/1.1" 200 8195
+INFO 2019-10-28 19:55:17,011 basehttp 9140 9976 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.widget.js HTTP/1.1" 200 15069
+INFO 2019-10-28 19:55:17,011 basehttp 9140 16820 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js HTTP/1.1" 200 4561
+INFO 2019-10-28 19:55:17,016 basehttp 9140 10560 "GET /static/xadmin/vendor/bootstrap/js/bootstrap.js HTTP/1.1" 200 58327
+INFO 2019-10-28 19:55:17,019 basehttp 9140 20440 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js HTTP/1.1" 200 42543
+INFO 2019-10-28 19:55:17,026 basehttp 9140 18724 "GET /static/xadmin/js/xadmin.main.js HTTP/1.1" 200 3401
+INFO 2019-10-28 19:55:17,029 basehttp 9140 10560 "GET /static/xadmin/js/xadmin.plugin.themes.js HTTP/1.1" 200 3489
+INFO 2019-10-28 19:55:17,029 basehttp 9140 3252 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-10-28 19:55:17,029 basehttp 9140 9976 "GET /static/xadmin/js/xadmin.responsive.js HTTP/1.1" 200 4165
+INFO 2019-10-28 19:55:17,030 basehttp 9140 16820 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.effect.js HTTP/1.1" 200 31918
+INFO 2019-10-28 19:55:17,043 basehttp 9140 20440 "GET /static/xadmin/js/xadmin.plugin.details.js HTTP/1.1" 200 2319
+INFO 2019-10-28 19:55:17,058 basehttp 9140 18724 "GET /static/xadmin/js/xadmin.plugin.bookmark.js HTTP/1.1" 200 529
+INFO 2019-10-28 19:55:17,059 basehttp 9140 16820 "GET /static/xadmin/js/xadmin.widget.datetime.js HTTP/1.1" 200 2979
+INFO 2019-10-28 19:55:17,059 basehttp 9140 10560 "GET /static/xadmin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js HTTP/1.1" 200 32656
+INFO 2019-10-28 19:55:17,060 basehttp 9140 9976 "GET /static/xadmin/vendor/select2/select2.js HTTP/1.1" 200 104906
+INFO 2019-10-28 19:55:17,061 basehttp 9140 3252 "GET /static/xadmin/vendor/selectize/selectize.js HTTP/1.1" 200 98602
+INFO 2019-10-28 19:55:17,109 basehttp 9140 20440 "GET /static/xadmin/vendor/select2/select2_locale_zh-hans.js HTTP/1.1" 200 694
+INFO 2019-10-28 19:55:17,123 basehttp 9140 9976 "GET /static/xadmin/js/xadmin.page.list.js HTTP/1.1" 200 1105
+INFO 2019-10-28 19:55:17,123 basehttp 9140 18724 "GET /static/xadmin/js/xadmin.widget.select.js HTTP/1.1" 200 1344
+INFO 2019-10-28 19:55:17,124 basehttp 9140 16820 "GET /static/xadmin/js/xadmin.plugin.filters.js HTTP/1.1" 200 1990
+INFO 2019-10-28 19:55:17,124 basehttp 9140 10560 "GET /static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3 HTTP/1.1" 200 44432
+INFO 2019-10-28 19:55:17,125 basehttp 9140 3252 "GET /static/xadmin/js/xadmin.page.form.js HTTP/1.1" 200 1948
+WARNING 2019-10-28 19:55:17,363 log 9140 3252 Not Found: /favicon.ico
+WARNING 2019-10-28 19:55:17,363 basehttp 9140 3252 "GET /favicon.ico HTTP/1.1" 404 2307
+INFO 2019-10-28 19:55:30,858 basehttp 15824 13852 "GET /xadmin/reversion/revision/ HTTP/1.1" 200 28970
+INFO 2019-10-28 19:55:30,966 basehttp 15824 13852 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-10-28 19:55:35,645 basehttp 15824 13852 "GET /xadmin/reversion/revision/ HTTP/1.1" 200 28970
+INFO 2019-10-28 19:55:35,681 basehttp 15824 13852 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-10-28 19:58:12,985 basehttp 15936 11548 "GET /xadmin/reversion/revision/ HTTP/1.1" 200 28970
+INFO 2019-10-28 19:58:13,022 basehttp 15936 11548 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 200 694
+INFO 2019-10-28 19:58:13,035 basehttp 15936 3276 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-10-28 19:58:18,088 basehttp 15936 3276 "GET /xadmin/home/banner/ HTTP/1.1" 200 23994
+INFO 2019-10-28 19:58:18,156 basehttp 15936 3276 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-10-28 19:58:50,420 basehttp 15936 3276 "GET /xadmin/home/banner/add/ HTTP/1.1" 200 19666
+INFO 2019-10-28 19:58:50,441 basehttp 15936 3276 "GET /static/xadmin/vendor/bootstrap/css/bootstrap.css HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,481 basehttp 15936 16192 "GET /static/xadmin/css/themes/bootstrap-xadmin.css HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,487 basehttp 15936 19860 "GET /static/xadmin/css/xadmin.main.css HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,490 basehttp 15936 16192 "GET /static/xadmin/css/xadmin.responsive.css HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,490 basehttp 15936 12692 "GET /static/xadmin/vendor/font-awesome/css/font-awesome.css HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,496 basehttp 15936 18636 "GET /static/xadmin/css/xadmin.plugins.css HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,503 basehttp 15936 16192 "GET /static/xadmin/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,503 basehttp 15936 12692 "GET /static/xadmin/css/xadmin.form.css HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,510 basehttp 15936 16192 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.core.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,511 basehttp 15936 12692 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.widget.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,521 basehttp 15936 16192 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,525 basehttp 15936 12692 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,526 basehttp 15936 18636 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-10-28 19:58:50,530 basehttp 15936 16192 "GET /static/xadmin/vendor/bootstrap/js/bootstrap.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,530 basehttp 15936 12692 "GET /static/xadmin/js/xadmin.main.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,531 basehttp 15936 3276 "GET /static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.css HTTP/1.1" 200 3339
+INFO 2019-10-28 19:58:50,536 basehttp 15936 18636 "GET /static/xadmin/js/xadmin.responsive.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,540 basehttp 15936 16192 "GET /static/xadmin/js/xadmin.plugin.themes.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,540 basehttp 15936 12692 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.effect.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,543 basehttp 15936 18636 "GET /static/xadmin/js/xadmin.plugin.portal.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,548 basehttp 15936 16192 "GET /static/xadmin/js/xadmin.page.form.js HTTP/1.1" 304 0
+INFO 2019-10-28 19:58:50,561 basehttp 15936 11548 "GET /static/xadmin/vendor/load-image/load-image.js HTTP/1.1" 200 8309
+INFO 2019-10-28 19:58:50,587 basehttp 15936 19860 "GET /static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.js HTTP/1.1" 200 15611

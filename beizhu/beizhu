@@ -8,4 +8,17 @@ git 分布式代码管理
         git push
 拉取代码：git pull
 
+#新建一个分支
+git branch 分支名称
+
+#查看所有分支
+git branch
+
+#切换分支
+git checkout 分支名称
+
+#删除分支
+
+git branch -d 分支名称
+
 

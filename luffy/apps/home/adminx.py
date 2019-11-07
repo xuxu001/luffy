@@ -19,5 +19,13 @@ xadmin.site.register(views.CommAdminView,GlobalSettings)
 #轮播图
 from .models import Banner
 class BannerModelAdmin(object):
-    list_display = ['name','orders','is_show']
+    list_display = ['name','link','is_show']
 xadmin.site.register(Banner,BannerModelAdmin)
+
+
+#导航栏
+
+from home.models import NavInfo
+class NavModelAdmin(object):
+    list_display = ['name', 'link', 'is_show']
+xadmin.site.register(NavInfo,NavModelAdmin)

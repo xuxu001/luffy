@@ -526,3 +526,69 @@ INFO 2019-11-07 12:39:46,085 basehttp 15612 12352 "GET /static/xadmin/vendor/sel
 INFO 2019-11-07 12:39:46,136 basehttp 15612 1852 "GET /static/xadmin/vendor/select2/select2.css HTTP/1.1" 200 19226
 INFO 2019-11-07 12:54:00,529 basehttp 8140 8372 "GET /xadmin/home/navinfo/add/ HTTP/1.1" 200 18857
 INFO 2019-11-07 12:54:00,566 basehttp 8140 8372 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-07 15:01:16,661 basehttp 8140 5792 "GET /home/banner/ HTTP/1.1" 200 5859
+INFO 2019-11-07 15:01:18,068 basehttp 8140 5792 "GET /home/nav/ HTTP/1.1" 200 5210
+INFO 2019-11-07 15:01:32,280 basehttp 8140 5792 "GET /home/banner/ HTTP/1.1" 200 5859
+WARNING 2019-11-11 10:35:16,627 log 16684 12876 Not Found: /
+WARNING 2019-11-11 10:35:16,641 basehttp 16684 12876 "GET / HTTP/1.1" 404 2256
+WARNING 2019-11-11 10:35:17,000 log 16684 12876 Not Found: /favicon.ico
+WARNING 2019-11-11 10:35:17,001 basehttp 16684 12876 "GET /favicon.ico HTTP/1.1" 404 2307
+INFO 2019-11-11 10:35:29,154 basehttp 16684 12876 "GET /home/banner/ HTTP/1.1" 200 5859
+INFO 2019-11-11 10:35:39,448 basehttp 16684 11576 "GET /home/banner/ HTTP/1.1" 200 211
+INFO 2019-11-11 10:37:28,029 basehttp 16684 11576 "GET /home/nav/ HTTP/1.1" 200 2
+INFO 2019-11-11 11:44:29,924 basehttp 16684 19048 "GET /xadmin/home/banner/add/ HTTP/1.1" 200 20174
+INFO 2019-11-11 11:44:30,193 basehttp 16684 18080 "GET /static/xadmin/css/xadmin.form.css HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,196 basehttp 16684 18080 "GET /static/xadmin/css/xadmin.plugins.css HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,198 basehttp 16684 18080 "GET /static/xadmin/css/xadmin.main.css HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,201 basehttp 16684 18080 "GET /static/xadmin/css/xadmin.responsive.css HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,236 basehttp 16684 28064 "GET /static/xadmin/vendor/bootstrap/css/bootstrap.css HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,241 basehttp 16684 22968 "GET /static/xadmin/vendor/font-awesome/css/font-awesome.css HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,271 basehttp 16684 18080 "GET /static/xadmin/css/themes/bootstrap-xadmin.css HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,287 basehttp 16684 28064 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.core.js HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,299 basehttp 16684 19048 "GET /static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.css HTTP/1.1" 200 3339
+INFO 2019-11-11 11:44:30,337 basehttp 16684 22968 "GET /static/xadmin/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,337 basehttp 16684 19048 "GET /static/xadmin/vendor/bootstrap/js/bootstrap.js HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,349 basehttp 16684 19048 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.widget.js HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,371 basehttp 16684 26584 "GET /static/xadmin/vendor/load-image/load-image.js HTTP/1.1" 200 8309
+INFO 2019-11-11 11:44:30,378 basehttp 16684 28080 "GET /static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.js HTTP/1.1" 200 15611
+INFO 2019-11-11 11:44:30,381 basehttp 16684 28080 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.effect.js HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,455 basehttp 16684 26584 "GET /static/xadmin/js/xadmin.responsive.js HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,455 basehttp 16684 28064 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-11 11:44:30,457 basehttp 16684 22968 "GET /static/xadmin/js/xadmin.main.js HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,458 basehttp 16684 18080 "GET /static/xadmin/js/xadmin.plugin.portal.js HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,459 basehttp 16684 19048 "GET /static/xadmin/js/xadmin.page.form.js HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,471 basehttp 16684 26584 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,471 basehttp 16684 28080 "GET /static/xadmin/js/xadmin.plugin.themes.js HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,472 basehttp 16684 22968 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:30,700 basehttp 16684 28064 "GET /static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3 HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:31,017 basehttp 16684 28064 "GET /xadmin/ HTTP/1.1" 200 14765
+INFO 2019-11-11 11:44:31,134 basehttp 16684 28064 "GET /xadmin/ HTTP/1.1" 200 14765
+INFO 2019-11-11 11:44:31,135 basehttp 16684 22968 "GET /static/xadmin/css/xadmin.page.dashboard.css HTTP/1.1" 304 0
+INFO 2019-11-11 11:44:31,195 basehttp 16684 28064 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-11 11:44:31,258 basehttp 16684 22968 "GET /static/xadmin/js/xadmin.page.dashboard.js HTTP/1.1" 200 3208
+INFO 2019-11-11 11:44:46,786 basehttp 16684 22968 "GET /xadmin/account/password/ HTTP/1.1" 200 16548
+INFO 2019-11-11 11:44:46,828 basehttp 16684 22968 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-11 11:44:53,136 basehttp 16684 22968 "GET /xadmin/logout/ HTTP/1.1" 200 2862
+INFO 2019-11-11 11:44:53,183 basehttp 16684 22968 "GET /xadmin/jsi18n/ HTTP/1.1" 200 4361
+INFO 2019-11-11 11:44:58,677 basehttp 16684 22968 "GET /xadmin/ HTTP/1.1" 200 4354
+INFO 2019-11-11 11:44:58,715 basehttp 16684 22968 "GET /xadmin/jsi18n/ HTTP/1.1" 200 4361
+INFO 2019-11-11 11:45:06,394 basehttp 16684 22968 "POST /xadmin/ HTTP/1.1" 302 0
+INFO 2019-11-11 11:45:06,450 basehttp 16684 22968 "GET /xadmin/ HTTP/1.1" 200 14765
+INFO 2019-11-11 11:45:06,483 basehttp 16684 22968 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-11 11:49:03,138 basehttp 16684 22968 "GET /xadmin/ HTTP/1.1" 200 14765
+INFO 2019-11-11 11:49:03,170 basehttp 16684 22968 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+WARNING 2019-11-11 20:27:46,505 log 35352 32732 Not Found: /users/login
+WARNING 2019-11-11 20:27:46,515 basehttp 35352 32732 "POST /users/login HTTP/1.1" 404 2413
+ERROR 2019-11-11 20:28:13,170 log 35352 32732 Internal Server Error: /user/login
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\deprecation.py", line 90, in __call__
+    response = self.process_request(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\middleware\common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\middleware\common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/user/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-11-11 20:28:13,171 basehttp 35352 32732 "POST /user/login HTTP/1.1" 500 70925
+INFO 2019-11-11 20:29:27,012 basehttp 35352 37064 "POST /user/login/ HTTP/1.1" 200 173

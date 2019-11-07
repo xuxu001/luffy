@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'home',
+    'users',
     'xadmin',
     'crispy_forms',
     'reversion',
@@ -218,4 +219,19 @@ LOGGING = {
 REST_FRAMEWORK ={
     #异常处理
     'EXCEPTION_HANDLER':'luffy.utils.exceptions.custom_exception_handler',
+    #修改优先使用的登陆方式
+    'DEFAULT_AUTHENTICATION_CLASS':(
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework_jwt.authentication.BasicAuthentication',
+        ''
+    )
 }
+import datetime
+#jwt字符串的有效期
+JWT_AUTH ={
+    'JWT_EXPIRATION_DELTA':datetime.timedelta(days=1),
+}
+
+#配置让django的Auth模块调用users字应用下面的User数据模型类
+AUTH_USER_MODEL = 'users.User'

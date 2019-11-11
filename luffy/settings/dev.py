@@ -230,7 +230,8 @@ REST_FRAMEWORK ={
 import datetime
 #jwt字符串的有效期
 JWT_AUTH ={
-    'JWT_EXPIRATION_DELTA':datetime.timedelta(days=1),
+    'JWT_EXPIRATION_DELTA':datetime.timedelta(days=7),
+    'JWT_RESPONSE_PAYLOAD_HANDLER':'users.utils.jwt_response_payload_handler'
 }
 
 #配置让django的Auth模块调用users字应用下面的User数据模型类

@@ -592,3 +592,6 @@ Traceback (most recent call last):
 RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/user/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
 ERROR 2019-11-11 20:28:13,171 basehttp 35352 32732 "POST /user/login HTTP/1.1" 500 70925
 INFO 2019-11-11 20:29:27,012 basehttp 35352 37064 "POST /user/login/ HTTP/1.1" 200 173
+WARNING 2019-11-11 20:37:22,884 log 34856 38916 Bad Request: /user/login/
+WARNING 2019-11-11 20:37:22,885 basehttp 34856 38916 "POST /user/login/ HTTP/1.1" 400 67
+INFO 2019-11-11 21:30:33,918 basehttp 40412 40768 "POST /user/login/ HTTP/1.1" 200 205

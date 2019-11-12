@@ -43,7 +43,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'home',
+    'users',
+    'xadmin',
+    'crispy_forms',
+    'reversion',
 ]
 
 MIDDLEWARE = [
@@ -61,7 +66,7 @@ ROOT_URLCONF = 'luffy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [],#[os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -84,18 +89,18 @@ WSGI_APPLICATION = 'luffy.wsgi.application'
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
+#     }}
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'music',
+        'NAME': 'django',
         'USER': 'ceshi001',
         'PASSWORD': 'ceshi001',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
-# }
+
 }
 
 
@@ -121,7 +126,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'zh-hans'
+LANGUAGE_CODE = 'zh-Hans'
 
 TIME_ZONE = 'Asia/Shanghai'
 
@@ -214,4 +219,24 @@ LOGGING = {
 REST_FRAMEWORK ={
     #异常处理
     'EXCEPTION_HANDLER':'luffy.utils.exceptions.custom_exception_handler',
+    #修改优先使用的登陆方式
+    'DEFAULT_AUTHENTICATION_CLASS':(
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework_jwt.authentication.BasicAuthentication',
+        ''
+    )
 }
+import datetime
+#jwt字符串的有效期
+JWT_AUTH ={
+    'JWT_EXPIRATION_DELTA':datetime.timedelta(days=7),
+    'JWT_RESPONSE_PAYLOAD_HANDLER':'users.utils.jwt_response_payload_handler'
+}
+#配置多条件登陆
+AUTHENTICATION_BACKENDS = [
+    'users.utils.UsernameMobileAuthBackend',
+]
+
+#配置让django的Auth模块调用users字应用下面的User数据模型类
+AUTH_USER_MODEL = 'users.User'

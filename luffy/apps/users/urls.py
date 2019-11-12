@@ -5,6 +5,4 @@ from . import views
 urlpatterns =[
     #调用drf_res 登陆接口
     path("login/",obtain_jwt_token),
-
-
 ]

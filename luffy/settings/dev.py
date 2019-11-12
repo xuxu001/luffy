@@ -66,7 +66,7 @@ ROOT_URLCONF = 'luffy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],# [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': [],#[os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -233,6 +233,10 @@ JWT_AUTH ={
     'JWT_EXPIRATION_DELTA':datetime.timedelta(days=7),
     'JWT_RESPONSE_PAYLOAD_HANDLER':'users.utils.jwt_response_payload_handler'
 }
+#配置多条件登陆
+AUTHENTICATION_BACKENDS = [
+    'users.utils.UsernameMobileAuthBackend',
+]
 
 #配置让django的Auth模块调用users字应用下面的User数据模型类
 AUTH_USER_MODEL = 'users.User'

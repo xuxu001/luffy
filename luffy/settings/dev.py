@@ -102,6 +102,37 @@ DATABASES = {
     }
 
 }
+#缓存
+#缓存介质：文件/内存
+#cdn 内容分发网络
+CACHES = {
+    "default":{
+        "BACKEND":"django_redis.cache.RedisCache",
+        "LOCATION":"redis://127.0.0.1:6379/0",
+        "OPTIONS":{
+            "CLIENT_CLASS":"django_redis.client.DefaultClient",
+        }
+    },
+    # xadmin的session存储
+    "session": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    },
+    #提供存储短信验证码
+    "sms_code":{
+            "BACKEND":"django_redis.cache.RedisCache",
+            "LOCATION":"redis://127.0.0.1:6379/2",
+            "OPTIONS":{
+                "CLIENT_CLASS":"django_redis.client.DefaultClient",
+            }
+        }
+}
+#设置xadmin用户登录时session保存到redis
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_CACHE_ALIAS = "session"
 
 
 # Password validation
@@ -240,3 +271,10 @@ AUTHENTICATION_BACKENDS = [
 
 #配置让django的Auth模块调用users字应用下面的User数据模型类
 AUTH_USER_MODEL = 'users.User'
+
+
+#短信接口信息
+SMS_ACCOUNTSID = "8aaf07086e0115bb016e683266493a2e"
+SMS_ACCOUNTTOKEN = "76a4fe24f49d4899af097373c51ea9ba"
+SMS_APPID = "8aaf07086e0115bb016e6832669f3a34"
+SMS_SERVERIP = "sandboxapp.cloopen.com"

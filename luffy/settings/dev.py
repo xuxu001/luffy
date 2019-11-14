@@ -278,3 +278,9 @@ SMS_ACCOUNTSID = "8aaf07086e0115bb016e683266493a2e"
 SMS_ACCOUNTTOKEN = "76a4fe24f49d4899af097373c51ea9ba"
 SMS_APPID = "8aaf07086e0115bb016e6832669f3a34"
 SMS_SERVERIP = "sandboxapp.cloopen.com"
+
+
+
+REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'rest_framework.views.exception_handler'
+}

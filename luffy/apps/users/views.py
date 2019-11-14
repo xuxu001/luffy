@@ -3,6 +3,8 @@ from rest_framework.views import APIView
 from .models import User
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.generics import CreateAPIView
+from .serializers import UserModelSerializer
 # Create your views here.
 from luffy.libs.yuntongxun.sms import CCP
 from luffy.settings.constant import SMS_EXPIRE_TIME,SMS_ID,SMS_INTERVAL_TIME
@@ -10,7 +12,12 @@ import random
 from django_redis import get_redis_connection
 import logging
 log = logging.getLogger("django")
+
+
 class CheckMobileAPIView(APIView):
+    '''
+    验证手机号是否注册
+    '''
     def get(self,request,mobile):
         result = False
         try:
@@ -25,6 +32,9 @@ class CheckMobileAPIView(APIView):
 
 
 class SMSAPIView(APIView):
+    '''
+    发送短信接口
+    '''
     def get(self,request,mobile):
         #接受手机号码，验证是否已注册
         log.error(mobile)
@@ -72,6 +82,19 @@ class SMSAPIView(APIView):
             return Response({'msg':'服务器异常'},status = status.HTTP_507_INSUFFICIENT_STORAGE)
 
         return Response({'msg':'短信发送成功'},status = status.HTTP_200_OK)
+
+
+class  UserAPIView(CreateAPIView):
+
+    queryset = User.objects.all()
+    serializer_class = UserModelSerializer
+    # def post(self,request):
+    #     #接受注册信息
+    #     mobile = request.data.get("mobile")
+    #     sms_code = request.data.get("sms_code")
+    #     password = request.data.get("password")
+    #     return Response("ok")
+
 
 
 

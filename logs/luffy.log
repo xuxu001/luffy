@@ -1334,3 +1334,267 @@ ERROR 2019-11-14 19:56:51,641 log 27808 30480 Insufficient Storage: /user/sms/18
 ERROR 2019-11-14 19:56:51,642 basehttp 27808 30480 "GET /user/sms/18682948872/ HTTP/1.1" 507 25
 ERROR 2019-11-14 19:57:47,817 views 38008 38752 18682948872
 INFO 2019-11-14 19:57:48,146 basehttp 38008 38752 "GET /user/sms/18682948872/ HTTP/1.1" 200 28
+ERROR 2019-11-14 19:58:12,500 views 37720 37412 18682948872
+WARNING 2019-11-14 19:58:12,535 log 37720 37412 Bad Request: /user/sms/18682948872/
+WARNING 2019-11-14 19:58:12,536 basehttp 37720 37412 "GET /user/sms/18682948872/ HTTP/1.1" 400 25
+ERROR 2019-11-14 21:00:09,095 views 43240 43616 18682948872
+INFO 2019-11-14 21:00:09,751 basehttp 43240 43616 "GET /user/sms/18682948872/ HTTP/1.1" 200 28
+ERROR 2019-11-14 21:02:05,718 log 43240 43616 Internal Server Error: /user/reg/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 507, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 417, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2019-11-14 21:02:05,720 basehttp 43240 43616 "POST /user/reg/ HTTP/1.1" 500 87641
+ERROR 2019-11-14 21:17:08,691 views 43080 44332 18682948872
+INFO 2019-11-14 21:17:08,848 basehttp 43080 44332 "GET /user/sms/18682948872/ HTTP/1.1" 200 28
+INFO 2019-11-14 21:17:25,363 basehttp 43080 44332 "POST /user/reg/ HTTP/1.1" 200 4
+ERROR 2019-11-14 21:20:21,031 log 44636 44972 Internal Server Error: /user/reg/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 243, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'non_field_errors': [ErrorDetail(string='手机短信不存在或者已过期', code='invalid')]}
+ERROR 2019-11-14 21:20:21,035 basehttp 44636 44972 "POST /user/reg/ HTTP/1.1" 500 21730
+ERROR 2019-11-14 21:21:36,583 log 44672 44868 Internal Server Error: /user/reg/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 243, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'non_field_errors': [ErrorDetail(string='手机短信不存在或者已过期', code='invalid')]}
+ERROR 2019-11-14 21:21:36,587 basehttp 44672 44868 "POST /user/reg/ HTTP/1.1" 500 21730
+ERROR 2019-11-14 21:22:27,948 log 44672 44868 Internal Server Error: /user/reg/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 243, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'non_field_errors': [ErrorDetail(string='手机号格式错误!', code='invalid')]}
+ERROR 2019-11-14 21:22:27,949 basehttp 44672 44868 "POST /user/reg/ HTTP/1.1" 500 21702
+ERROR 2019-11-14 21:23:43,153 log 44672 44868 Internal Server Error: /user/reg/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 243, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'non_field_errors': [ErrorDetail(string='手机号格式错误!', code='invalid')]}
+ERROR 2019-11-14 21:23:43,155 basehttp 44672 44868 "POST /user/reg/ HTTP/1.1" 500 21702
+ERROR 2019-11-14 21:24:02,227 log 44752 44652 Internal Server Error: /user/reg/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 243, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'non_field_errors': [ErrorDetail(string='手机号格式错误!', code='invalid')]}
+ERROR 2019-11-14 21:24:02,230 basehttp 44752 44652 "POST /user/reg/ HTTP/1.1" 500 21702
+ERROR 2019-11-14 21:24:12,016 log 44752 44652 Internal Server Error: /user/reg/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 243, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'non_field_errors': [ErrorDetail(string='手机短信不存在或者已过期', code='invalid')]}
+ERROR 2019-11-14 21:24:12,017 basehttp 44752 44652 "POST /user/reg/ HTTP/1.1" 500 21730
+ERROR 2019-11-14 21:24:31,712 views 44752 44652 18682948872
+INFO 2019-11-14 21:24:31,843 basehttp 44752 44652 "GET /user/sms/18682948872/ HTTP/1.1" 200 28
+INFO 2019-11-14 21:24:49,084 basehttp 44752 44652 "POST /user/reg/ HTTP/1.1" 201 213
+ERROR 2019-11-14 21:24:58,333 log 44752 44652 Internal Server Error: /user/reg/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 243, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'mobile': [ErrorDetail(string='具有 手机号 的 用户 已存在。', code='unique')], 'sms_code': [ErrorDetail(string='请确保这个字段不能超过 6 个字符。', code='max_length')]}
+ERROR 2019-11-14 21:24:58,335 basehttp 44752 44652 "POST /user/reg/ HTTP/1.1" 500 21926
+ERROR 2019-11-14 21:25:10,265 log 44752 44652 Internal Server Error: /user/reg/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 243, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'mobile': [ErrorDetail(string='具有 手机号 的 用户 已存在。', code='unique')]}
+ERROR 2019-11-14 21:25:10,267 basehttp 44752 44652 "POST /user/reg/ HTTP/1.1" 500 21716
+WARNING 2019-11-14 21:29:45,634 log 44540 45520 Bad Request: /user/reg/
+WARNING 2019-11-14 21:29:45,634 basehttp 44540 45520 "POST /user/reg/ HTTP/1.1" 400 61
+WARNING 2019-11-14 21:29:49,795 log 44540 45520 Bad Request: /user/reg/
+WARNING 2019-11-14 21:29:49,795 basehttp 44540 45520 "POST /user/reg/ HTTP/1.1" 400 61
+WARNING 2019-11-14 21:29:56,859 log 44540 45520 Bad Request: /user/reg/
+WARNING 2019-11-14 21:29:56,860 basehttp 44540 45520 "POST /user/reg/ HTTP/1.1" 400 61
+WARNING 2019-11-14 21:30:27,212 log 44540 45520 Bad Request: /user/reg/
+WARNING 2019-11-14 21:30:27,213 basehttp 44540 45520 "POST /user/reg/ HTTP/1.1" 400 61
+WARNING 2019-11-14 21:30:34,862 log 44540 45520 Bad Request: /user/reg/
+WARNING 2019-11-14 21:30:34,863 basehttp 44540 45520 "POST /user/reg/ HTTP/1.1" 400 61
+INFO 2019-11-14 21:31:44,786 basehttp 44540 45520 "POST /user/reg/ HTTP/1.1" 201 213

@@ -7,4 +7,5 @@ urlpatterns =[
     path("login/",obtain_jwt_token),
     re_path("mobile/(?P<mobile>1[3-9]\d{9})/",views.CheckMobileAPIView.as_view()),
     re_path("sms/(?P<mobile>1[3-9]\d{9})/",views.SMSAPIView.as_view()),
+    path("reg/",views.UserAPIView.as_view()),
 ]

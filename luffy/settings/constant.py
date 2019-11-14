@@ -7,7 +7,7 @@ BANNER_LENGTH = 7
 NAV_LENGTH = 5
 
 #短信发送有效期【单位秒】
-SMS_EXPIRE_TIME = 300
+SMS_EXPIRE_TIME = 3000
 
 #短信模板的id
 SMS_ID = 1

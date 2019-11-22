@@ -5,8 +5,8 @@
 
 # -*- coding: UTF-8 -*-
 
-from luffy.libs.yuntongxun.CCPRestSDK import REST
-from luffy.settings.dev import SMS_ACCOUNTSID,SMS_ACCOUNTTOKEN,SMS_APPID,SMS_SERVERIP
+from .CCPRestSDK import REST
+from mycelery.sms.constant import SMS_ACCOUNTSID,SMS_ACCOUNTTOKEN,SMS_APPID,SMS_SERVERIP
 
 # 主帐号
 accountSid = SMS_ACCOUNTSID;

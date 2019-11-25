@@ -74,6 +74,20 @@ class CCP(object):
         else:
             return -1
 
+# def send_sms(mobile, code_expire_tuple, temp_id):
+#     # 配置
+#     rest = REST(serverIP, serverPort, softVersion)
+#     rest.setAccount(accountSid, accountToken)
+#     rest.setAppId(appId)
+#     #
+#     # 发送
+#     result = rest.sendTemplateSMS(mobile, code_expire_tuple, temp_id)
+#     # 结果：信息成功发生，结果字典result中 statuCode 字段为 "000000"
+#     if result.get("statusCode") == "000000":
+#         return True  # 表示发送短信成功
+#     else:
+#         return False  # 表示发送失败
+
 if __name__ == "__main__":
     ccp = CCP()
 

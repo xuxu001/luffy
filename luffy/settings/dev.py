@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'xadmin',
     'crispy_forms',
     'reversion',
+    'course',
+    # 'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -284,3 +286,13 @@ SMS_SERVERIP = "sandboxapp.cloopen.com"
 REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': 'rest_framework.views.exception_handler'
 }
+
+#
+# CORS_ORIGIN_ALLOW_ALL = False
+#
+# CORS_ORIGIN_WHITELIST = [
+#     # 记住是自己的前端，要携带端口
+#     'http://127.0.0.1:8080',
+#     # 一般就是浏览器那里显示什么，这里就是什么
+#     # 'http://localhost:8080'
+# ]

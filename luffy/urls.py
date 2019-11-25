@@ -29,4 +29,7 @@ urlpatterns = [
     path(r'xadmin/',xadmin.site.urls),
     path('home/',include("home.urls")),
     path('user/',include("users.urls")),
+    path('courses/',include("course.urls")),
 ]
+
+

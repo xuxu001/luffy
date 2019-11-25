@@ -27,10 +27,14 @@ app.autodiscover_tasks(["mycelery.sms"])
 
 
 
-#启动celery的命令
+#启动celery的命令z
+# 下载eventlet
 
 # celery -A mycelery.main worker --loglevel=info -P eventlet
 
 
 #启动redis
 # redis-server redis.windows.conf
+
+
+

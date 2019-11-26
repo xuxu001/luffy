@@ -26,11 +26,12 @@ xversion.register_models()
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'media/(?P<path>.*)',serve,{"document_root":settings.MEDIA_ROOT}),
-    path(r'^ckeditor/',include('ckeditor_uploader.urls')),
+    path(r'ckeditor/',include('ckeditor_uploader.urls')),
     path(r'xadmin/',xadmin.site.urls),
     path('home/',include("home.urls")),
     path('user/',include("users.urls")),
     path('courses/',include("course.urls")),
+    path('cart/',include("cart.urls")),
 ]
 
 

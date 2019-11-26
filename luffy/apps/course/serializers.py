@@ -23,7 +23,7 @@ class TeacherSeruakuzer(serializers.ModelSerializer):
     '''课程列表的老师信息'''
     class Meta:
         model = Teacher
-        fields = ["id","name","role","title","signature"]
+        fields = ["id","name","role","title","signature","brief","image"]
 
 class CourseSerializer(serializers.ModelSerializer):
     '''课程列表的基本信息'''
@@ -31,3 +31,9 @@ class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
         fields =["id","name","course_img","students","lessons","pub_lessons","price","teacher","lessom_list"]
+
+class CourseRetrieveSerializer(serializers.ModelSerializer):
+    teacher = TeacherSeruakuzer()
+    class Meta:
+        model = Course
+        fields = ['id','name','course_img','students','lessons','pub_lessons','price','teacher','brief','level_name']

@@ -25,3 +25,7 @@ SMS_APPID = "8aaf07086e0115bb016e6832669f3a34"
 
 
 SMS_SERVERIP = "sandboxapp.cloopen.com"
+
+
+#课程列表页推荐课时的数量
+RECOMMEND_SIZE = 6

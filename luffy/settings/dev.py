@@ -50,6 +50,9 @@ INSTALLED_APPS = [
     'crispy_forms',
     'reversion',
     'course',
+    'django_filters',#过滤组件
+    'ckeditor',#富文本编辑器
+    'ckeditor_uploader',#富文本编辑器上传图片模块
     # 'corsheaders',
 ]
 
@@ -296,3 +299,27 @@ REST_FRAMEWORK = {
 #     # 一般就是浏览器那里显示什么，这里就是什么
 #     # 'http://localhost:8080'
 # ]
+
+#富文本编辑器设置
+# CKEDITOR_CONFIGS = {
+#     'default': {
+#         'toolbar': 'full',#工具条功能【full】，表示所有功能，【basic】表示简易功能，【custom】表示自定义功能
+#         'height': 300,
+#         # 'width': 300,
+#     },
+# }
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'height': 300,
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline','Image'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ]
+    }
+}
+CKEDITOR_UPLOAD_PATH = '' #上传图片保存路径，留空则调用django的文件上传功能
+

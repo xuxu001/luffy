@@ -30,4 +30,4 @@ class CourseSerializer(serializers.ModelSerializer):
     teacher = TeacherSeruakuzer()
     class Meta:
         model = Course
-        fields =["id","name","course_img","students","lessons","pub_lessons","price","teacher"]
+        fields =["id","name","course_img","students","lessons","pub_lessons","price","teacher","lessom_list"]

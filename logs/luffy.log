@@ -2242,3 +2242,593 @@ INFO 2019-11-25 19:31:48,480 basehttp 44268 38452 "GET /xadmin/jsi18n/ HTTP/1.1"
 INFO 2019-11-25 19:32:02,089 basehttp 44268 38452 "POST /xadmin/course/courselesson/1/update/ HTTP/1.1" 302 0
 INFO 2019-11-25 19:32:02,200 basehttp 44268 38452 "GET /xadmin/course/courselesson/? HTTP/1.1" 200 31609
 INFO 2019-11-25 19:32:02,274 basehttp 44268 38452 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:10:43,812 basehttp 10248 21388 "GET /xadmin/ HTTP/1.1" 200 4354
+INFO 2019-11-26 11:10:43,932 basehttp 10248 26024 "GET /static/xadmin/css/themes/bootstrap-xadmin.css HTTP/1.1" 200 1888
+INFO 2019-11-26 11:10:43,947 basehttp 10248 15160 "GET /static/xadmin/css/xadmin.main.css HTTP/1.1" 200 8376
+INFO 2019-11-26 11:10:43,954 basehttp 10248 21356 "GET /static/xadmin/vendor/font-awesome/css/font-awesome.css HTTP/1.1" 200 21658
+INFO 2019-11-26 11:10:43,964 basehttp 10248 2492 "GET /static/xadmin/css/xadmin.plugins.css HTTP/1.1" 200 175
+INFO 2019-11-26 11:10:44,080 basehttp 10248 15160 "GET /xadmin/jsi18n/ HTTP/1.1" 200 4361
+INFO 2019-11-26 11:10:44,083 basehttp 10248 21388 "GET /static/xadmin/vendor/bootstrap/css/bootstrap.css HTTP/1.1" 200 126432
+INFO 2019-11-26 11:10:44,094 basehttp 10248 22628 "GET /static/xadmin/css/xadmin.responsive.css HTTP/1.1" 200 4361
+INFO 2019-11-26 11:10:44,188 basehttp 10248 15160 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js HTTP/1.1" 200 4561
+INFO 2019-11-26 11:10:44,203 basehttp 10248 2492 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.widget.js HTTP/1.1" 200 15069
+INFO 2019-11-26 11:10:44,238 basehttp 10248 21356 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.core.js HTTP/1.1" 200 8195
+INFO 2019-11-26 11:10:44,348 basehttp 10248 21388 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js HTTP/1.1" 200 42543
+INFO 2019-11-26 11:10:44,378 basehttp 10248 15160 "GET /static/xadmin/js/xadmin.main.js HTTP/1.1" 200 3401
+INFO 2019-11-26 11:10:44,404 basehttp 10248 26024 "GET /static/xadmin/vendor/jquery/jquery.js HTTP/1.1" 200 240196
+INFO 2019-11-26 11:10:44,427 basehttp 10248 21356 "GET /static/xadmin/js/xadmin.responsive.js HTTP/1.1" 200 4165
+INFO 2019-11-26 11:10:44,428 basehttp 10248 21388 "GET /static/xadmin/js/xadmin.plugin.themes.js HTTP/1.1" 200 3489
+INFO 2019-11-26 11:10:44,450 basehttp 10248 2492 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.effect.js HTTP/1.1" 200 31918
+INFO 2019-11-26 11:10:44,500 basehttp 10248 22628 "GET /static/xadmin/vendor/bootstrap/js/bootstrap.js HTTP/1.1" 200 58327
+INFO 2019-11-26 11:10:44,834 basehttp 10248 22628 "GET /static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3 HTTP/1.1" 200 44432
+WARNING 2019-11-26 11:10:44,912 log 10248 22628 Not Found: /favicon.ico
+WARNING 2019-11-26 11:10:44,912 basehttp 10248 22628 "GET /favicon.ico HTTP/1.1" 404 2520
+ERROR 2019-11-26 11:11:00,957 log 10248 22628 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django_redis\cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django_redis\cache.py", line 124, in has_key
+    return self.client.has_key(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django_redis\client\default.py", line 478, in has_key
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\xadmin\sites.py", line 207, in inner
+    return self.create_admin_view(self.login_view)(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\xadmin\views\website.py", line 71, in post
+    return self.get(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\xadmin\views\website.py", line 67, in get
+    return login.as_view(**defaults)(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\contrib\auth\views.py", line 61, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\edit.py", line 142, in post
+    return self.form_valid(form)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\contrib\auth\views.py", line 90, in form_valid
+    auth_login(self.request, form.get_user())
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\contrib\auth\__init__.py", line 108, in login
+    request.session.cycle_key()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\contrib\sessions\backends\base.py", line 298, in cycle_key
+    self.create()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\contrib\sessions\backends\cache.py", line 43, in create
+    self._session_key = self._get_new_session_key()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\contrib\sessions\backends\base.py", line 153, in _get_new_session_key
+    if not self.exists(session_key):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\contrib\sessions\backends\cache.py", line 70, in exists
+    return bool(session_key) and (self.cache_key_prefix + session_key) in self._cache
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\cache\backends\base.py", line 208, in __contains__
+    return self.has_key(key)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django_redis\cache.py", line 39, in _decorator
+    raise e.parent
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django_redis\client\default.py", line 476, in has_key
+    return client.exists(key) == 1
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\client.py", line 1307, in exists
+    return self.execute_command('EXISTS', *names)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\client.py", line 836, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\connection.py", line 1071, in get_connection
+    connection.connect()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\connection.py", line 543, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+ERROR 2019-11-26 11:11:00,973 basehttp 10248 22628 "POST /xadmin/ HTTP/1.1" 500 223480
+INFO 2019-11-26 11:12:09,377 basehttp 10248 22628 "GET /xadmin/ HTTP/1.1" 200 4354
+INFO 2019-11-26 11:12:09,433 basehttp 10248 22628 "GET /xadmin/jsi18n/ HTTP/1.1" 200 4361
+INFO 2019-11-26 11:12:12,695 basehttp 10248 22628 "POST /xadmin/ HTTP/1.1" 302 0
+INFO 2019-11-26 11:12:13,216 basehttp 10248 22628 "GET /xadmin/ HTTP/1.1" 200 18454
+INFO 2019-11-26 11:12:13,301 basehttp 10248 22628 "GET /static/xadmin/css/xadmin.page.dashboard.css HTTP/1.1" 200 790
+INFO 2019-11-26 11:12:13,342 basehttp 10248 22628 "GET /static/xadmin/js/xadmin.page.dashboard.js HTTP/1.1" 200 3208
+INFO 2019-11-26 11:12:13,369 basehttp 10248 2492 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:12:21,341 basehttp 10248 2492 "GET /xadmin/course/teacher/ HTTP/1.1" 200 31048
+INFO 2019-11-26 11:12:21,412 basehttp 10248 21388 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:12:21,454 basehttp 10248 2492 "GET /static/xadmin/css/xadmin.form.css HTTP/1.1" 200 3763
+INFO 2019-11-26 11:12:21,468 basehttp 10248 22628 "GET /static/xadmin/js/xadmin.page.form.js HTTP/1.1" 200 1948
+INFO 2019-11-26 11:12:22,313 basehttp 10248 22628 "GET /xadmin/course/coursechapter/ HTTP/1.1" 200 32975
+INFO 2019-11-26 11:12:22,343 basehttp 10248 22628 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:12:23,242 basehttp 10248 22628 "GET /xadmin/course/courselesson/ HTTP/1.1" 200 31347
+INFO 2019-11-26 11:12:23,294 basehttp 10248 22628 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:25:53,746 basehttp 36296 43608 "GET /xadmin/course/courselesson/ HTTP/1.1" 200 31477
+INFO 2019-11-26 11:25:53,788 basehttp 36296 43608 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:25:55,477 basehttp 36296 43608 "GET /xadmin/course/teacher/ HTTP/1.1" 200 31048
+INFO 2019-11-26 11:25:55,516 basehttp 36296 43608 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:25:58,287 basehttp 36296 43608 "GET /xadmin/course/coursechapter/ HTTP/1.1" 200 32975
+INFO 2019-11-26 11:25:58,322 basehttp 36296 43608 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:25:59,474 basehttp 36296 43608 "GET /xadmin/course/coursechapter/3/update/ HTTP/1.1" 200 23736
+INFO 2019-11-26 11:25:59,548 basehttp 36296 43608 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:26:03,190 basehttp 36296 43608 "GET /xadmin/course/courselesson/ HTTP/1.1" 200 31477
+INFO 2019-11-26 11:26:03,223 basehttp 36296 43608 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:26:05,928 basehttp 36296 43608 "GET /xadmin/course/courselesson/1/update/ HTTP/1.1" 200 24902
+INFO 2019-11-26 11:26:05,974 basehttp 36296 43608 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:26:48,690 basehttp 36296 43608 "GET /xadmin/course/courselesson/ HTTP/1.1" 200 31477
+INFO 2019-11-26 11:26:48,734 basehttp 36296 43608 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:26:49,911 basehttp 36296 43608 "GET /xadmin/course/courselesson/2/update/ HTTP/1.1" 200 24867
+INFO 2019-11-26 11:26:49,959 basehttp 36296 43608 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:26:53,612 basehttp 36296 43608 "GET /xadmin/course/courselesson/ HTTP/1.1" 200 31477
+INFO 2019-11-26 11:26:53,663 basehttp 36296 43608 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:26:55,200 basehttp 36296 43608 "GET /xadmin/course/courselesson/3/update/ HTTP/1.1" 200 24899
+INFO 2019-11-26 11:26:55,235 basehttp 36296 43608 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:26:59,792 basehttp 36296 43608 "POST /xadmin/course/courselesson/3/update/ HTTP/1.1" 302 0
+INFO 2019-11-26 11:26:59,964 basehttp 36296 43608 "GET /xadmin/course/courselesson/? HTTP/1.1" 200 31739
+INFO 2019-11-26 11:27:00,005 basehttp 36296 43608 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:27:01,435 basehttp 36296 43608 "GET /xadmin/course/courselesson/2/update/ HTTP/1.1" 200 24867
+INFO 2019-11-26 11:27:01,473 basehttp 36296 43608 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:27:05,068 basehttp 36296 43608 "POST /xadmin/course/courselesson/2/update/ HTTP/1.1" 302 0
+INFO 2019-11-26 11:27:05,171 basehttp 36296 43608 "GET /xadmin/course/courselesson/? HTTP/1.1" 200 31733
+INFO 2019-11-26 11:27:05,207 basehttp 36296 43608 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:27:17,245 basehttp 36296 43608 "GET /xadmin/course/courselesson/ HTTP/1.1" 200 31477
+INFO 2019-11-26 11:27:17,275 basehttp 36296 43608 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:27:18,741 basehttp 36296 43608 "GET /xadmin/course/courselesson/1/update/ HTTP/1.1" 200 24902
+INFO 2019-11-26 11:27:18,789 basehttp 36296 43608 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:27:20,825 basehttp 36296 43608 "POST /xadmin/course/courselesson/1/update/ HTTP/1.1" 302 0
+INFO 2019-11-26 11:27:20,940 basehttp 36296 43608 "GET /xadmin/course/courselesson/? HTTP/1.1" 200 31739
+INFO 2019-11-26 11:27:20,972 basehttp 36296 43608 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 11:27:22,538 basehttp 36296 43608 "GET /xadmin/course/courselesson/3/update/ HTTP/1.1" 200 24907
+INFO 2019-11-26 11:27:22,583 basehttp 36296 43608 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+ERROR 2019-11-26 12:03:02,124 log 47444 47676 Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 757, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 675, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 675, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 511, in to_representation
+    for field in fields:
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 372, in _readable_fields
+    for field in self.fields.values():
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\functional.py", line 37, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 360, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 1047, in get_fields
+    source, info, model, depth
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 1192, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 1309, in build_unknown_field
+    (field_name, model_class.__name__)
+django.core.exceptions.ImproperlyConfigured: Field name `coursechapter_list` is not valid for model `Course`.
+ERROR 2019-11-26 12:03:02,134 basehttp 47444 47676 "GET /courses/ HTTP/1.1" 500 23229
+ERROR 2019-11-26 12:03:26,021 log 15984 44392 Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 156, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 154, in _get_response
+    response = response.render()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\renderers.py", line 104, in render
+    allow_nan=not self.strict, separators=separators
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type CourseChapter is not JSON serializable
+ERROR 2019-11-26 12:03:26,026 basehttp 15984 44392 "GET /courses/ HTTP/1.1" 500 119226
+ERROR 2019-11-26 12:03:44,430 log 17112 47676 Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 156, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 154, in _get_response
+    response = response.render()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\renderers.py", line 104, in render
+    allow_nan=not self.strict, separators=separators
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type CourseChapter is not JSON serializable
+ERROR 2019-11-26 12:03:44,434 basehttp 17112 47676 "GET /courses/ HTTP/1.1" 500 119226
+INFO 2019-11-26 12:04:13,711 basehttp 17112 48096 "GET /xadmin/course/courselesson/ HTTP/1.1" 200 31477
+INFO 2019-11-26 12:04:13,861 basehttp 17112 48096 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+ERROR 2019-11-26 12:08:41,194 log 33868 47212 Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 156, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 154, in _get_response
+    response = response.render()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\renderers.py", line 104, in render
+    allow_nan=not self.strict, separators=separators
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type CourseChapter is not JSON serializable
+ERROR 2019-11-26 12:08:41,202 basehttp 33868 47212 "GET /courses/ HTTP/1.1" 500 119226
+INFO 2019-11-26 12:09:03,284 basehttp 33868 47988 "GET /xadmin/course/courselesson/1/update/ HTTP/1.1" 200 24910
+INFO 2019-11-26 12:09:03,357 basehttp 33868 47988 "GET /static/xadmin/css/xadmin.form.css HTTP/1.1" 200 3763
+INFO 2019-11-26 12:09:03,406 basehttp 33868 12412 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+ERROR 2019-11-26 12:09:36,252 log 45596 38136 Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 156, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 154, in _get_response
+    response = response.render()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\renderers.py", line 104, in render
+    allow_nan=not self.strict, separators=separators
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type CourseChapter is not JSON serializable
+ERROR 2019-11-26 12:09:36,256 basehttp 45596 38136 "GET /courses/ HTTP/1.1" 500 119226
+INFO 2019-11-26 12:15:36,174 basehttp 48928 49024 "GET /xadmin/course/coursechapter/ HTTP/1.1" 200 32975
+INFO 2019-11-26 12:15:36,303 basehttp 48928 49024 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 12:15:39,371 basehttp 48928 49024 "GET /xadmin/course/coursechapter/1/update/ HTTP/1.1" 200 23744
+INFO 2019-11-26 12:15:39,410 basehttp 48928 49024 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 12:15:41,876 basehttp 48928 49024 "GET /xadmin/course/coursechapter/ HTTP/1.1" 200 32975
+INFO 2019-11-26 12:15:41,912 basehttp 48928 49024 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 12:15:43,249 basehttp 48928 49024 "GET /xadmin/course/coursechapter/2/update/ HTTP/1.1" 200 23736
+INFO 2019-11-26 12:15:43,292 basehttp 48928 49024 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 12:15:46,724 basehttp 48928 49024 "POST /xadmin/course/coursechapter/2/update/ HTTP/1.1" 302 0
+INFO 2019-11-26 12:15:46,816 basehttp 48928 49024 "GET /xadmin/course/coursechapter/? HTTP/1.1" 200 33224
+INFO 2019-11-26 12:15:46,849 basehttp 48928 49024 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 12:15:48,531 basehttp 48928 49024 "GET /xadmin/course/coursechapter/3/update/ HTTP/1.1" 200 23736
+INFO 2019-11-26 12:15:48,570 basehttp 48928 49024 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 12:15:50,891 basehttp 48928 49024 "POST /xadmin/course/coursechapter/3/update/ HTTP/1.1" 302 0
+INFO 2019-11-26 12:15:51,030 basehttp 48928 49024 "GET /xadmin/course/coursechapter/? HTTP/1.1" 200 33224
+INFO 2019-11-26 12:15:51,063 basehttp 48928 49024 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 12:15:52,778 basehttp 48928 49024 "GET /xadmin/course/courselesson/ HTTP/1.1" 200 31477
+INFO 2019-11-26 12:15:52,826 basehttp 48928 49024 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+ERROR 2019-11-26 12:16:16,859 log 48376 48824 Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 156, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 154, in _get_response
+    response = response.render()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\renderers.py", line 104, in render
+    allow_nan=not self.strict, separators=separators
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type CourseChapter is not JSON serializable
+ERROR 2019-11-26 12:16:16,859 basehttp 48376 48824 "GET /courses/ HTTP/1.1" 500 120123
+INFO 2019-11-26 12:16:50,288 basehttp 48376 47956 "GET /xadmin/course/coursechapter/ HTTP/1.1" 200 32975
+INFO 2019-11-26 12:16:50,322 basehttp 48376 47956 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 12:16:52,099 basehttp 48376 47956 "GET /xadmin/course/courselesson/ HTTP/1.1" 200 31477
+INFO 2019-11-26 12:16:52,132 basehttp 48376 47956 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 12:17:00,217 basehttp 48376 47956 "GET /xadmin/course/coursechapter/ HTTP/1.1" 200 32975
+INFO 2019-11-26 12:17:00,250 basehttp 48376 47956 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 12:17:01,984 basehttp 48376 47956 "GET /xadmin/course/courselesson/ HTTP/1.1" 200 31477
+INFO 2019-11-26 12:17:02,021 basehttp 48376 47956 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 12:17:03,518 basehttp 48376 47956 "GET /xadmin/course/coursechapter/ HTTP/1.1" 200 32975
+INFO 2019-11-26 12:17:03,556 basehttp 48376 47956 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 12:17:03,899 basehttp 48376 47956 "GET /xadmin/course/coursechapter/ HTTP/1.1" 200 32975
+INFO 2019-11-26 12:17:03,936 basehttp 48376 47956 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 12:17:04,959 basehttp 48376 47956 "GET /xadmin/course/courselesson/ HTTP/1.1" 200 31477
+INFO 2019-11-26 12:17:04,990 basehttp 48376 47956 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 12:23:21,215 basehttp 49120 48824 "GET /courses/ HTTP/1.1" 200 937
+INFO 2019-11-26 12:24:13,492 basehttp 49524 49664 "GET /courses/ HTTP/1.1" 200 937
+INFO 2019-11-26 12:24:23,855 basehttp 49956 49996 "GET /courses/ HTTP/1.1" 200 888
+INFO 2019-11-26 13:39:59,617 basehttp 49976 50788 "GET /courses/ HTTP/1.1" 200 937
+ERROR 2019-11-26 13:58:53,204 log 50952 50760 Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django_filters\rest_framework\backends.py", line 90, in filter_queryset
+    filterset = self.get_filterset(request, queryset, view)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django_filters\rest_framework\backends.py", line 31, in get_filterset
+    filterset_class = self.get_filterset_class(view, queryset)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django_filters\rest_framework\backends.py", line 73, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django_filters\filterset.py", line 71, in __new__
+    new_class.base_filters = new_class.get_filters()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django_filters\filterset.py", line 352, in get_filters
+    "%s" % ', '.join(undefined)
+TypeError: 'Meta.fields' contains fields that are not defined on this FilterSet: course_category
+ERROR 2019-11-26 13:58:53,206 basehttp 50952 50760 "GET /courses/?course_category=1 HTTP/1.1" 500 22521
+INFO 2019-11-26 13:59:34,911 basehttp 50896 51816 "GET /courses/?courst_category=1 HTTP/1.1" 200 937
+INFO 2019-11-26 13:59:42,403 basehttp 50896 51816 "GET /courses/?courst_category=2 HTTP/1.1" 200 2
+INFO 2019-11-26 14:05:13,243 basehttp 52644 52420 "GET /xadmin/course/course/ HTTP/1.1" 200 34183
+INFO 2019-11-26 14:05:13,244 basehttp 52644 50840 "GET /xadmin/course/coursecategory/ HTTP/1.1" 200 34419
+ERROR 2019-11-26 14:05:13,478 basehttp 52644 52420 "GET /xadmin/course/course/ HTTP/1.1" 500 59
+INFO 2019-11-26 14:05:14,276 basehttp 52644 50840 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 14:05:18,231 basehttp 52644 50840 "GET /xadmin/course/course/ HTTP/1.1" 200 34183
+INFO 2019-11-26 14:05:18,280 basehttp 52644 50840 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 14:05:20,873 basehttp 52644 50840 "GET /xadmin/course/teacher/ HTTP/1.1" 200 31048
+INFO 2019-11-26 14:05:20,925 basehttp 52644 50840 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 14:05:22,402 basehttp 52644 50840 "GET /xadmin/course/coursechapter/ HTTP/1.1" 200 32975
+INFO 2019-11-26 14:05:22,463 basehttp 52644 50840 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 14:05:24,771 basehttp 52644 50840 "GET /xadmin/course/coursecategory/ HTTP/1.1" 200 34419
+INFO 2019-11-26 14:05:24,810 basehttp 52644 50840 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 14:05:26,795 basehttp 52644 50840 "GET /xadmin/course/coursecategory/5/update/ HTTP/1.1" 200 21459
+INFO 2019-11-26 14:05:26,848 basehttp 52644 50840 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 14:05:31,883 basehttp 52644 50840 "GET /xadmin/course/course/ HTTP/1.1" 200 34183
+INFO 2019-11-26 14:05:31,920 basehttp 52644 50840 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 14:05:32,823 basehttp 52644 50840 "GET /xadmin/course/teacher/ HTTP/1.1" 200 31048
+INFO 2019-11-26 14:05:32,861 basehttp 52644 50840 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 14:05:34,277 basehttp 52644 50840 "GET /xadmin/course/course/ HTTP/1.1" 200 34183
+INFO 2019-11-26 14:05:34,318 basehttp 52644 50840 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 14:05:38,464 basehttp 52644 50840 "GET /xadmin/course/course/add/ HTTP/1.1" 200 29092
+INFO 2019-11-26 14:05:38,604 basehttp 52644 52388 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 14:05:38,697 basehttp 52644 21844 "GET /static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.js HTTP/1.1" 200 15611
+INFO 2019-11-26 14:05:38,740 basehttp 52644 52636 "GET /static/xadmin/vendor/load-image/load-image.js HTTP/1.1" 200 8309
+INFO 2019-11-26 14:05:38,835 basehttp 52644 50840 "GET /static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.css HTTP/1.1" 200 3339
+INFO 2019-11-26 14:06:15,576 basehttp 52644 50840 "POST /xadmin/course/course/add/ HTTP/1.1" 302 0
+INFO 2019-11-26 14:06:15,707 basehttp 52644 50840 "GET /xadmin/course/course/ HTTP/1.1" 200 35454
+INFO 2019-11-26 14:06:15,747 basehttp 52644 50840 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 14:06:17,812 basehttp 52644 50840 "GET /xadmin/course/coursechapter/ HTTP/1.1" 200 32975
+INFO 2019-11-26 14:06:17,849 basehttp 52644 50840 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 14:06:20,160 basehttp 52644 50840 "GET /xadmin/course/coursechapter/add/ HTTP/1.1" 200 23429
+INFO 2019-11-26 14:06:20,216 basehttp 52644 50840 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 14:06:33,592 basehttp 52644 50840 "POST /xadmin/course/coursechapter/add/ HTTP/1.1" 302 0
+INFO 2019-11-26 14:06:33,710 basehttp 52644 50840 "GET /xadmin/course/coursechapter/ HTTP/1.1" 200 34292
+INFO 2019-11-26 14:06:33,764 basehttp 52644 50840 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 14:06:34,932 basehttp 52644 50840 "GET /xadmin/course/courselesson/ HTTP/1.1" 200 31477
+INFO 2019-11-26 14:06:34,973 basehttp 52644 50840 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 14:06:36,795 basehttp 52644 50840 "GET /xadmin/course/courselesson/add/ HTTP/1.1" 200 24522
+INFO 2019-11-26 14:06:36,860 basehttp 52644 50840 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 14:06:59,553 basehttp 52644 50840 "POST /xadmin/course/courselesson/add/ HTTP/1.1" 302 0
+INFO 2019-11-26 14:06:59,669 basehttp 52644 50840 "GET /xadmin/course/courselesson/ HTTP/1.1" 200 32206
+INFO 2019-11-26 14:06:59,745 basehttp 52644 50840 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 14:07:02,895 basehttp 52644 53060 "GET /courses/?courst_category=2 HTTP/1.1" 200 321
+ERROR 2019-11-26 14:32:06,786 log 51376 47708 Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+AttributeError: 'OrderingFilter' object has no attribute 'filter_queryset'
+ERROR 2019-11-26 14:32:06,791 basehttp 51376 47708 "GET /courses/?ordering=-id HTTP/1.1" 500 21478
+ERROR 2019-11-26 14:35:06,650 log 51376 47708 Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+AttributeError: 'OrderingFilter' object has no attribute 'filter_queryset'
+ERROR 2019-11-26 14:35:06,652 basehttp 51376 47708 "GET /courses/?ordering=-id HTTP/1.1" 500 21478
+INFO 2019-11-26 14:35:44,891 basehttp 52300 48492 "GET /courses/?ordering=-id HTTP/1.1" 200 1257
+INFO 2019-11-26 14:36:04,912 basehttp 52300 48492 "GET /courses/?ordering=-price HTTP/1.1" 200 1257
+INFO 2019-11-26 14:36:19,207 basehttp 52300 48492 "GET /courses/?ordering=price HTTP/1.1" 200 1257
+INFO 2019-11-26 14:37:05,198 basehttp 52300 48492 "GET /courses/?ordering=student HTTP/1.1" 200 1257
+INFO 2019-11-26 14:37:20,902 basehttp 52300 48492 "GET /courses/?ordering=-student HTTP/1.1" 200 1257
+INFO 2019-11-26 14:37:38,131 basehttp 52300 48492 "GET /courses/?ordering=student HTTP/1.1" 200 1257
+INFO 2019-11-26 14:37:49,860 basehttp 52300 48492 "GET /courses/?ordering=students HTTP/1.1" 200 1257
+INFO 2019-11-26 14:37:55,811 basehttp 52300 48492 "GET /courses/?ordering=-students HTTP/1.1" 200 1257
+INFO 2019-11-26 14:58:14,600 basehttp 53472 53980 "GET /courses/?ordering=-students HTTP/1.1" 200 1307
+INFO 2019-11-26 14:58:46,031 basehttp 53472 53980 "GET /courses/ HTTP/1.1" 200 1307
+INFO 2019-11-26 14:59:43,961 basehttp 53472 48388 "GET /xadmin/course/coursecategory/ HTTP/1.1" 200 34419
+INFO 2019-11-26 14:59:44,197 basehttp 53472 48388 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 15:00:08,433 basehttp 50616 54256 "GET /courses/ HTTP/1.1" 200 1022
+INFO 2019-11-26 15:51:56,520 basehttp 52420 49436 "GET /courses/?page=1 HTTP/1.1" 200 1022
+INFO 2019-11-26 15:52:28,464 basehttp 52420 49436 "GET /courses/?page=1&page_size=5 HTTP/1.1" 200 1307
+INFO 2019-11-26 15:52:40,487 basehttp 52420 49436 "GET /courses/?page=1&page_size=5 HTTP/1.1" 200 1307
+INFO 2019-11-26 17:24:39,538 basehttp 56476 49204 "GET /xadmin/course/coursecategory/ HTTP/1.1" 200 34419
+INFO 2019-11-26 17:24:40,106 basehttp 56476 50316 "GET /static/xadmin/css/xadmin.responsive.css HTTP/1.1" 200 4361
+INFO 2019-11-26 17:24:40,107 basehttp 56476 42980 "GET /static/xadmin/css/xadmin.main.css HTTP/1.1" 200 8376
+INFO 2019-11-26 17:24:40,139 basehttp 56476 56744 "GET /static/xadmin/css/xadmin.form.css HTTP/1.1" 200 3763
+INFO 2019-11-26 17:24:40,178 basehttp 56476 56752 "GET /static/xadmin/css/themes/bootstrap-xadmin.css HTTP/1.1" 200 1888
+INFO 2019-11-26 17:24:40,184 basehttp 56476 8796 "GET /static/xadmin/vendor/font-awesome/css/font-awesome.css HTTP/1.1" 200 21658
+INFO 2019-11-26 17:24:40,220 basehttp 56476 50316 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 17:24:40,259 basehttp 56476 49204 "GET /static/xadmin/vendor/bootstrap/css/bootstrap.css HTTP/1.1" 200 126432
+WARNING 2019-11-26 17:24:40,616 log 56476 49204 Not Found: /favicon.ico
+WARNING 2019-11-26 17:24:40,617 basehttp 56476 49204 "GET /favicon.ico HTTP/1.1" 404 2630
+INFO 2019-11-26 17:28:17,074 basehttp 56036 44960 "GET /xadmin/course/coursechapter/ HTTP/1.1" 200 33973
+INFO 2019-11-26 17:28:17,126 basehttp 56036 44960 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 17:28:18,715 basehttp 56036 44960 "GET /xadmin/course/coursechapter/2/update/ HTTP/1.1" 200 23777
+INFO 2019-11-26 17:28:18,834 basehttp 56036 44960 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 17:28:22,739 basehttp 56036 44960 "GET /xadmin/course/teacher/ HTTP/1.1" 200 31048
+INFO 2019-11-26 17:28:22,779 basehttp 56036 44960 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 17:28:23,301 basehttp 56036 44960 "GET /xadmin/course/course/ HTTP/1.1" 200 35158
+INFO 2019-11-26 17:28:23,459 basehttp 56036 44960 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 17:28:25,289 basehttp 56036 44960 "GET /xadmin/course/course/3/update/ HTTP/1.1" 200 31024
+INFO 2019-11-26 17:28:25,411 basehttp 56036 40612 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 17:28:25,498 basehttp 56036 47528 "GET /media/course/6b06ae0349188806569fadb66ca9f723.jpg HTTP/1.1" 200 317107
+INFO 2019-11-26 17:28:25,640 basehttp 56036 47528 "GET /static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.js HTTP/1.1" 200 15611
+INFO 2019-11-26 17:28:25,661 basehttp 56036 55956 "GET /static/xadmin/vendor/load-image/load-image.js HTTP/1.1" 200 8309
+INFO 2019-11-26 17:28:25,682 basehttp 56036 44960 "GET /static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.css HTTP/1.1" 200 3339
+INFO 2019-11-26 17:28:25,687 basehttp 56036 55956 "GET /static/ckeditor/ckeditor-init.js HTTP/1.1" 200 2216
+INFO 2019-11-26 17:28:27,303 basehttp 56036 47528 "GET /static/ckeditor/ckeditor/ckeditor.js HTTP/1.1" 200 717619
+INFO 2019-11-26 17:28:27,494 basehttp 56036 47528 "GET /static/ckeditor/ckeditor/config.js?t=J8Q8 HTTP/1.1" 200 338
+INFO 2019-11-26 17:28:27,572 basehttp 56036 55956 "GET /static/ckeditor/ckeditor/lang/zh.js?t=J8Q8 HTTP/1.1" 200 18470
+INFO 2019-11-26 17:28:27,597 basehttp 56036 55956 "GET /static/ckeditor/ckeditor/styles.js?t=J8Q8 HTTP/1.1" 200 5579
+INFO 2019-11-26 17:28:27,613 basehttp 56036 55956 "GET /static/ckeditor/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css?t=J8Q8 HTTP/1.1" 200 381
+INFO 2019-11-26 17:28:27,615 basehttp 56036 44960 "GET /static/ckeditor/ckeditor/plugins/scayt/dialogs/dialog.css?t=J8Q8 HTTP/1.1" 200 419
+INFO 2019-11-26 17:28:27,633 basehttp 56036 47528 "GET /static/ckeditor/ckeditor/skins/moono-lisa/editor.css?t=J8Q8 HTTP/1.1" 200 47977
+INFO 2019-11-26 17:28:27,646 basehttp 56036 44960 "GET /static/ckeditor/ckeditor/plugins/copyformatting/styles/copyformatting.css HTTP/1.1" 200 1513
+INFO 2019-11-26 17:28:27,668 basehttp 56036 40612 "GET /static/ckeditor/ckeditor/plugins/tableselection/styles/tableselection.css HTTP/1.1" 200 1145
+INFO 2019-11-26 17:28:27,692 basehttp 56036 48188 "GET /static/ckeditor/ckeditor/plugins/dialog/styles/dialog.css HTTP/1.1" 200 249
+INFO 2019-11-26 17:28:27,705 basehttp 56036 40612 "GET /static/ckeditor/ckeditor/plugins/icons.png?t=J8Q8 HTTP/1.1" 200 12421
+INFO 2019-11-26 17:28:27,737 basehttp 56036 57340 "GET /static/ckeditor/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css?t=J8Q8 HTTP/1.1" 200 1306
+INFO 2019-11-26 17:28:27,793 basehttp 56036 40612 "GET /static/ckeditor/ckeditor/contents.css?t=J8Q8 HTTP/1.1" 200 3094
+INFO 2019-11-26 17:28:27,997 basehttp 56036 40612 "GET /static/ckeditor/ckeditor/skins/moono-lisa/icons.png?t=83e9de8d6b HTTP/1.1" 200 12421
+INFO 2019-11-26 17:28:46,330 basehttp 57620 57748 "GET /xadmin/course/course/3/update/ HTTP/1.1" 200 31024
+INFO 2019-11-26 17:28:46,406 basehttp 57620 57748 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 17:29:34,223 basehttp 58076 51268 "GET /xadmin/course/course/3/update/ HTTP/1.1" 200 31436
+INFO 2019-11-26 17:29:34,799 basehttp 58076 51268 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 17:29:58,671 basehttp 55448 57824 "GET /xadmin/course/course/3/update/ HTTP/1.1" 200 31455
+INFO 2019-11-26 17:29:58,730 basehttp 55448 57824 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-26 17:30:00,739 basehttp 55448 57640 "GET /static/ckeditor/ckeditor/skins/moono-lisa/dialog.css?t=J8Q8 HTTP/1.1" 200 13708
+INFO 2019-11-26 17:30:00,875 basehttp 55448 57824 "GET /static/ckeditor/ckeditor/plugins/image/dialogs/image.js?t=J8Q8 HTTP/1.1" 200 21531
+INFO 2019-11-26 17:30:00,916 basehttp 55448 57824 "GET /static/ckeditor/ckeditor/skins/moono-lisa/images/close.png HTTP/1.1" 200 615
+INFO 2019-11-26 17:30:00,918 basehttp 55448 57640 "GET /static/ckeditor/ckeditor/skins/moono-lisa/images/lock.png HTTP/1.1" 200 506
+INFO 2019-11-26 17:30:00,936 basehttp 55448 52328 "GET /static/ckeditor/ckeditor/skins/moono-lisa/images/refresh.png HTTP/1.1" 200 757

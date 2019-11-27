@@ -29,3 +29,5 @@ SMS_SERVERIP = "sandboxapp.cloopen.com"
 
 #课程列表页推荐课时的数量
 RECOMMEND_SIZE = 6
+
+SERVER_IMAGE_DEMAIN = 'http://127.0.0.1:8000/'

@@ -3718,3 +3718,844 @@ INFO 2019-11-28 15:38:24,985 basehttp 97984 95928 "GET /courses/1/ HTTP/1.1" 200
 INFO 2019-11-28 16:07:24,375 basehttp 103848 66192 "GET /cart/ HTTP/1.1" 200 630
 INFO 2019-11-28 17:23:21,885 basehttp 106008 86448 "GET /xadmin/course/teacher/ HTTP/1.1" 200 33464
 ERROR 2019-11-28 17:23:22,076 basehttp 106008 86448 "GET /xadmin/course/teacher/ HTTP/1.1" 500 59
+INFO 2019-11-29 12:08:33,783 basehttp 118756 109712 "GET /xadmin/ HTTP/1.1" 200 22448
+INFO 2019-11-29 12:08:34,241 basehttp 118756 109712 "GET /static/xadmin/css/xadmin.plugins.css HTTP/1.1" 200 175
+INFO 2019-11-29 12:08:34,258 basehttp 118756 67888 "GET /static/xadmin/css/xadmin.page.dashboard.css HTTP/1.1" 200 790
+INFO 2019-11-29 12:08:34,439 basehttp 118756 67888 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-29 12:08:34,751 basehttp 118756 67888 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.core.js HTTP/1.1" 200 8195
+INFO 2019-11-29 12:08:34,858 basehttp 118756 109712 "GET /static/xadmin/vendor/jquery/jquery.js HTTP/1.1" 200 240196
+INFO 2019-11-29 12:08:34,980 basehttp 118756 67888 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.widget.js HTTP/1.1" 200 15069
+INFO 2019-11-29 12:08:35,450 basehttp 118756 109712 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js HTTP/1.1" 200 42543
+INFO 2019-11-29 12:08:35,507 basehttp 118756 67888 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js HTTP/1.1" 200 4561
+INFO 2019-11-29 12:08:35,709 basehttp 118756 21472 "GET /static/xadmin/vendor/bootstrap/js/bootstrap.js HTTP/1.1" 200 58327
+INFO 2019-11-29 12:08:35,720 basehttp 118756 109712 "GET /static/xadmin/js/xadmin.main.js HTTP/1.1" 200 3401
+INFO 2019-11-29 12:08:35,764 basehttp 118756 67888 "GET /static/xadmin/js/xadmin.responsive.js HTTP/1.1" 200 4165
+INFO 2019-11-29 12:08:35,874 basehttp 118756 21472 "GET /static/xadmin/js/xadmin.page.dashboard.js HTTP/1.1" 200 3208
+INFO 2019-11-29 12:08:35,927 basehttp 118756 67888 "GET /static/xadmin/js/xadmin.plugin.themes.js HTTP/1.1" 200 3489
+INFO 2019-11-29 12:08:35,949 basehttp 118756 109712 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.effect.js HTTP/1.1" 200 31918
+INFO 2019-11-29 12:08:36,502 basehttp 118756 109712 "GET /static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3 HTTP/1.1" 200 44432
+WARNING 2019-11-29 12:08:36,698 log 118756 109712 Not Found: /favicon.ico
+WARNING 2019-11-29 12:08:36,698 basehttp 118756 109712 "GET /favicon.ico HTTP/1.1" 404 2734
+INFO 2019-11-29 12:08:44,245 basehttp 118756 109712 "GET /xadmin/orders/orderdetail/ HTTP/1.1" 200 32594
+INFO 2019-11-29 12:08:44,346 basehttp 118756 109712 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-29 12:08:44,366 basehttp 118756 67888 "GET /static/xadmin/js/xadmin.page.form.js HTTP/1.1" 200 1948
+INFO 2019-11-29 12:08:49,813 basehttp 118756 67888 "GET /xadmin/orders/order/ HTTP/1.1" 200 33477
+INFO 2019-11-29 12:08:49,855 basehttp 118756 67888 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2019-11-29 12:09:53,152 basehttp 117912 118388 "GET /xadmin/orders/order/ HTTP/1.1" 200 33477
+INFO 2019-11-29 12:09:53,274 basehttp 117912 118388 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+ERROR 2019-11-29 15:00:12,937 log 125284 125428 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 235, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 430, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 483, in to_internal_value
+    for field in fields:
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 366, in _writable_fields
+    for field in self.fields.values():
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\functional.py", line 37, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 360, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 1056, in get_fields
+    fields[field_name] = field_class(**field_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 1410, in __init__
+    super().__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'require'
+ERROR 2019-11-29 15:00:12,954 basehttp 125284 125428 "POST /orders/ HTTP/1.1" 500 23277
+WARNING 2019-11-29 15:00:36,956 log 119104 125940 Bad Request: /orders/
+WARNING 2019-11-29 15:00:36,957 basehttp 119104 125940 "POST /orders/ HTTP/1.1" 400 119
+WARNING 2019-11-29 15:01:25,702 log 119104 125940 Bad Request: /orders/
+WARNING 2019-11-29 15:01:25,703 basehttp 119104 125940 "POST /orders/ HTTP/1.1" 400 75
+WARNING 2019-11-29 15:04:42,044 log 124724 120092 Bad Request: /orders/
+WARNING 2019-11-29 15:04:42,045 basehttp 124724 120092 "POST /orders/ HTTP/1.1" 400 75
+WARNING 2019-11-29 15:05:01,736 log 125828 124848 Bad Request: /orders/
+WARNING 2019-11-29 15:05:01,736 basehttp 125828 124848 "POST /orders/ HTTP/1.1" 400 75
+WARNING 2019-11-29 15:06:39,433 log 113536 121712 Bad Request: /orders/
+WARNING 2019-11-29 15:06:39,434 basehttp 113536 121712 "POST /orders/ HTTP/1.1" 400 75
+WARNING 2019-11-29 15:07:41,403 log 113536 121712 Bad Request: /orders/
+WARNING 2019-11-29 15:07:41,403 basehttp 113536 121712 "POST /orders/ HTTP/1.1" 400 37
+INFO 2019-11-29 15:16:52,209 basehttp 124352 125084 "POST /orders/ HTTP/1.1" 201 241
+INFO 2019-11-29 15:19:29,717 basehttp 125540 126436 "POST /orders/ HTTP/1.1" 201 232
+INFO 2019-11-29 15:30:03,671 basehttp 126964 123112 "POST /orders/ HTTP/1.1" 201 232
+INFO 2019-11-29 15:32:22,668 basehttp 122948 120352 "POST /orders/ HTTP/1.1" 201 232
+ERROR 2019-11-29 15:54:44,514 log 127908 129112 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 443, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 93, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'ValidationError' object has no attribute 'pay_type'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 513, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 476, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `pay_type` on serializer `OrderModerSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ValidationError` instance.
+Original exception text was: 'ValidationError' object has no attribute 'pay_type'.
+ERROR 2019-11-29 15:54:44,554 basehttp 127908 129112 "POST /orders/ HTTP/1.1" 500 23545
+ERROR 2019-11-29 15:59:18,037 log 129372 129076 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 443, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 93, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'ValidationError' object has no attribute 'pay_type'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 513, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 476, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `pay_type` on serializer `OrderModerSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ValidationError` instance.
+Original exception text was: 'ValidationError' object has no attribute 'pay_type'.
+ERROR 2019-11-29 15:59:18,041 basehttp 129372 129076 "POST /orders/ HTTP/1.1" 500 23545
+INFO 2019-11-29 16:03:09,157 basehttp 129372 126804 "GET /xadmin/orders/order/ HTTP/1.1" 200 40985
+INFO 2019-11-29 16:03:09,446 basehttp 129372 126804 "GET /static/xadmin/css/xadmin.plugins.css HTTP/1.1" 200 175
+INFO 2019-11-29 16:03:10,108 basehttp 129372 89700 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.core.js HTTP/1.1" 200 8195
+INFO 2019-11-29 16:03:10,274 basehttp 129372 89700 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.widget.js HTTP/1.1" 200 15069
+INFO 2019-11-29 16:03:10,288 basehttp 129372 126804 "GET /static/xadmin/vendor/jquery/jquery.js HTTP/1.1" 200 240196
+INFO 2019-11-29 16:03:10,529 basehttp 129372 89700 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js HTTP/1.1" 200 4561
+INFO 2019-11-29 16:03:10,697 basehttp 129372 126804 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js HTTP/1.1" 200 42543
+INFO 2019-11-29 16:03:10,765 basehttp 129372 89700 "GET /static/xadmin/vendor/bootstrap/js/bootstrap.js HTTP/1.1" 200 58327
+INFO 2019-11-29 16:03:11,103 basehttp 129372 89700 "GET /static/xadmin/js/xadmin.responsive.js HTTP/1.1" 200 4165
+INFO 2019-11-29 16:03:11,270 basehttp 129372 89700 "GET /static/xadmin/js/xadmin.plugin.themes.js HTTP/1.1" 200 3489
+INFO 2019-11-29 16:03:11,272 basehttp 129372 126804 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.effect.js HTTP/1.1" 200 31918
+INFO 2019-11-29 16:03:11,321 basehttp 129372 129676 "GET /static/xadmin/js/xadmin.main.js HTTP/1.1" 200 3401
+INFO 2019-11-29 16:03:11,506 basehttp 129372 129676 "GET /static/xadmin/js/xadmin.page.form.js HTTP/1.1" 200 1948
+INFO 2019-11-29 16:03:11,873 basehttp 129372 129676 "GET /static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3 HTTP/1.1" 200 44432
+ERROR 2019-11-29 16:03:12,896 log 129372 129076 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 443, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 93, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'ValidationError' object has no attribute 'pay_type'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 513, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 476, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `pay_type` on serializer `OrderModerSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ValidationError` instance.
+Original exception text was: 'ValidationError' object has no attribute 'pay_type'.
+ERROR 2019-11-29 16:03:12,897 basehttp 129372 129076 "POST /orders/ HTTP/1.1" 500 23545
+ERROR 2019-11-29 16:07:49,444 log 122620 23160 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 443, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 93, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'ValidationError' object has no attribute 'pay_type'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 513, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 476, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `pay_type` on serializer `OrderModerSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ValidationError` instance.
+Original exception text was: 'ValidationError' object has no attribute 'pay_type'.
+ERROR 2019-11-29 16:07:49,449 basehttp 122620 23160 "POST /orders/ HTTP/1.1" 500 23545
+ERROR 2019-11-29 16:08:13,169 log 127476 128136 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 443, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 93, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'ValidationError' object has no attribute 'pay_type'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 513, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 476, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `pay_type` on serializer `OrderModerSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ValidationError` instance.
+Original exception text was: 'ValidationError' object has no attribute 'pay_type'.
+ERROR 2019-11-29 16:08:13,174 basehttp 127476 128136 "POST /orders/ HTTP/1.1" 500 23545
+ERROR 2019-11-29 16:11:31,914 log 128500 129932 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 443, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 93, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'ValidationError' object has no attribute 'pay_type'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 513, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 476, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `pay_type` on serializer `OrderModerSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ValidationError` instance.
+Original exception text was: 'ValidationError' object has no attribute 'pay_type'.
+ERROR 2019-11-29 16:11:31,918 basehttp 128500 129932 "POST /orders/ HTTP/1.1" 500 23545
+INFO 2019-11-29 16:11:57,955 basehttp 126348 124144 "POST /orders/ HTTP/1.1" 201 233
+INFO 2019-11-29 16:13:22,566 basehttp 124008 121468 "POST /orders/ HTTP/1.1" 201 233
+ERROR 2019-11-29 16:14:11,516 log 128088 126676 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 443, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 93, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'ValidationError' object has no attribute 'pay_type'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 513, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 476, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `pay_type` on serializer `OrderModerSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ValidationError` instance.
+Original exception text was: 'ValidationError' object has no attribute 'pay_type'.
+ERROR 2019-11-29 16:14:11,523 basehttp 128088 126676 "POST /orders/ HTTP/1.1" 500 23545
+INFO 2019-11-29 16:15:14,679 basehttp 108632 123912 "POST /orders/ HTTP/1.1" 201 233
+INFO 2019-11-29 16:16:33,458 basehttp 108576 128676 "POST /orders/ HTTP/1.1" 201 233
+INFO 2019-11-29 16:18:57,276 basehttp 128608 129004 "POST /orders/ HTTP/1.1" 201 233
+ERROR 2019-11-29 16:19:12,148 log 128792 129000 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 443, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 93, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'ValidationError' object has no attribute 'pay_type'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 513, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 476, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `pay_type` on serializer `OrderModerSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ValidationError` instance.
+Original exception text was: 'ValidationError' object has no attribute 'pay_type'.
+ERROR 2019-11-29 16:19:12,158 basehttp 128792 129000 "POST /orders/ HTTP/1.1" 500 23545
+ERROR 2019-11-29 16:21:21,170 log 129184 120852 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 443, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 93, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'ValidationError' object has no attribute 'pay_type'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 513, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 476, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `pay_type` on serializer `OrderModerSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ValidationError` instance.
+Original exception text was: 'ValidationError' object has no attribute 'pay_type'.
+ERROR 2019-11-29 16:21:21,174 basehttp 129184 120852 "POST /orders/ HTTP/1.1" 500 23545
+ERROR 2019-11-29 16:23:16,313 log 129184 120852 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 443, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 93, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'ValidationError' object has no attribute 'pay_type'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 513, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 476, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `pay_type` on serializer `OrderModerSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ValidationError` instance.
+Original exception text was: 'ValidationError' object has no attribute 'pay_type'.
+ERROR 2019-11-29 16:23:16,314 basehttp 129184 120852 "POST /orders/ HTTP/1.1" 500 23545
+ERROR 2019-11-29 16:24:16,852 log 124664 130044 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 443, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 93, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'ValidationError' object has no attribute 'pay_type'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 513, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 476, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `pay_type` on serializer `OrderModerSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ValidationError` instance.
+Original exception text was: 'ValidationError' object has no attribute 'pay_type'.
+ERROR 2019-11-29 16:24:16,856 basehttp 124664 130044 "POST /orders/ HTTP/1.1" 500 23545
+ERROR 2019-11-29 16:38:50,519 log 129572 92504 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 443, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 93, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'ValidationError' object has no attribute 'pay_type'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 513, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 476, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `pay_type` on serializer `OrderModerSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ValidationError` instance.
+Original exception text was: 'ValidationError' object has no attribute 'pay_type'.
+ERROR 2019-11-29 16:38:50,525 basehttp 129572 92504 "POST /orders/ HTTP/1.1" 500 23545
+ERROR 2019-11-29 16:41:36,336 log 130468 119100 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 443, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 93, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'ValidationError' object has no attribute 'pay_type'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 513, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 476, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `pay_type` on serializer `OrderModerSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ValidationError` instance.
+Original exception text was: 'ValidationError' object has no attribute 'pay_type'.
+ERROR 2019-11-29 16:41:36,355 basehttp 130468 119100 "POST /orders/ HTTP/1.1" 500 23545
+ERROR 2019-11-29 16:45:07,153 log 118540 130552 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 443, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 93, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'ValidationError' object has no attribute 'pay_type'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 513, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 476, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `pay_type` on serializer `OrderModerSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ValidationError` instance.
+Original exception text was: 'ValidationError' object has no attribute 'pay_type'.
+ERROR 2019-11-29 16:45:07,157 basehttp 118540 130552 "POST /orders/ HTTP/1.1" 500 23545
+ERROR 2019-11-29 16:46:02,862 log 130416 122824 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 443, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 93, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'ValidationError' object has no attribute 'pay_type'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 513, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\fields.py", line 476, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `pay_type` on serializer `OrderModerSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ValidationError` instance.
+Original exception text was: 'ValidationError' object has no attribute 'pay_type'.
+ERROR 2019-11-29 16:46:02,867 basehttp 130416 122824 "POST /orders/ HTTP/1.1" 500 23545
+ERROR 2019-11-29 17:07:52,692 log 131692 131768 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 213, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\daiba\jiaxu\luffy\luffy\apps\orders\serializers.py", line 83, in create
+    course = Course.orders.get(pk=course_id)
+AttributeError: 'DeferredAttribute' object has no attribute 'get'
+ERROR 2019-11-29 17:07:52,697 basehttp 131692 131768 "POST /orders/ HTTP/1.1" 500 22282
+ERROR 2019-11-29 17:09:38,310 log 126244 131328 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 460, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 471, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\daiba\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\serializers.py", line 213, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\daiba\jiaxu\luffy\luffy\apps\orders\serializers.py", line 83, in create
+    course = Course.orders.filter(pk=course_id)
+AttributeError: 'DeferredAttribute' object has no attribute 'filter'
+ERROR 2019-11-29 17:09:38,313 basehttp 126244 131328 "POST /orders/ HTTP/1.1" 500 22291

@@ -29,3 +29,8 @@ from home.models import NavInfo
 class NavModelAdmin(object):
     list_display = ['name', 'link', 'is_show']
 xadmin.site.register(NavInfo,NavModelAdmin)
+
+from orders.models import Order
+
+
+
